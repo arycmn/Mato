@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background-image: url(${props => props.srcPicture});
-    width:${props => props.width};
-    height: ${props => props.height};
+    background-image: url(${({srcPicture}) => srcPicture});
+    width:${({width})=> width};
+    height: ${({height}) => height};
     border-radius: ${({pictureType}) => pictureType === 'profile' ? 
         "50%" : pictureType === 'location' &&  "8%"};
     margin-top:200px;
@@ -17,9 +17,9 @@ export const Container = styled.div`
 export const Filter = styled.div`
     width:100%;
     height: 100%;
-    background-color: ${props => props.filterColor};
+    background-color: ${({filterColor})=> filterColor};
     z-index:1;
-    opacity:${props => props.filterOpacity};
+    opacity:${({filterOpacity}) => filterOpacity};
     overflow:hidden;
     border-radius:inherit;
 `;
@@ -29,7 +29,7 @@ export const Text = styled.div`
     position:absolute;
     margin-top:-40px;
     margin-left:10px;
-    font-weight:${props => props.textWeight};
+    font-weight:${({textWeight}) => textWeight};
     
     @media (min-width:1024px){
         position:relative;
