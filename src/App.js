@@ -1,11 +1,5 @@
-import { useState } from "react";
-
 function App() {
-  return (
-    <div>
-      <FavoriteIcon />
-    </div>
-  );
+  return <div>Hello World!</div>;
 }
 
 export default App;
