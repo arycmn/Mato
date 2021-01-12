@@ -6,8 +6,6 @@ export const Container = styled.div`
     height: ${({height}) => height};
     border-radius: ${({pictureType}) => pictureType === 'profile' ? 
         "50%" : pictureType === 'location' &&  "8%"};
-    margin-top:200px;
-    margin-left:200px;
 @media (min-width:1024px){
         border-radius: ${({pictureType}) => pictureType === 'profile' ? 
         "50%" : pictureType === 'location' &&  "0%"};
