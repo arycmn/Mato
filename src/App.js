@@ -1,11 +1,5 @@
-import SearchFilterBox from "./components/atoms/SearchFilterBox";
-
 function App() {
-  return (
-    <div>
-      <SearchFilterBox></SearchFilterBox>
-    </div>
-  );
+  return <div>Hello World</div>;
 }
 
 export default App;

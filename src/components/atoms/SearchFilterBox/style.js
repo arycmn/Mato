@@ -6,6 +6,7 @@ export const Container = styled.div`
 `;
 export const Fragment = styled.div`
   > .Button {
+    outline: none;
     border: 0;
     background: transparent;
     cursor: pointer;
@@ -13,8 +14,8 @@ export const Fragment = styled.div`
     justify-content: center;
     align-items: center;
     > img {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       padding-right: 10px;
     }
   }
