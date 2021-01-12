@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { favoriteFull } from "../../../icons";
-import { favoriteEmpty } from "../../../icons";
-
+import { Container } from "./style";
+import { favoriteFull, favoriteEmpty } from "../../../icons";
 const FavoriteIcon = () => {
   const [Checked, NewChecked] = useState(false);
   return (
-    <div
+    <Container
       onClick={() => {
         NewChecked(!Checked);
       }}
@@ -15,7 +14,7 @@ const FavoriteIcon = () => {
       ) : (
         <img src={favoriteEmpty}></img>
       )}
-    </div>
+    </Container>
   );
 };
 export default FavoriteIcon;

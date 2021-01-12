@@ -1,4 +1,5 @@
-import FavoriteIcon from "./components/atoms/FavoriteIcon";
+import { useState } from "react";
+
 function App() {
   return (
     <div>
