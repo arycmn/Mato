@@ -1,5 +1,7 @@
+import FriendCard from "./components/molecules/FriendCard";
+
 function App() {
-  return <div>Hello world!</div>;
+  return <FriendCard />;
 }
 
 export default App;
