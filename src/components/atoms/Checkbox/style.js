@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  width: 30px;
+  width: 20px;
   border: none;
   background: #3a613e;
   opacity: 85%;

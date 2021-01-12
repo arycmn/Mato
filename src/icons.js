@@ -45,12 +45,12 @@ export const child = "https://img.icons8.com/dusk/64/000000/baby.png";
 export const coronaVirus =
   "https://img.icons8.com/dusk/64/000000/coronavirus.png";
 
-export const unckecked =
-  "https://img.icons8.com/dusk/64/000000/unchecked-circle.png";
+export const uncheckedIcon =
+  "https://img.icons8.com/dusk/42/000000/unchecked-circle.png";
 
-export const checked = "https://img.icons8.com/dusk/64/000000/ok.png";
+export const checkedIcon = "https://img.icons8.com/dusk/30/000000/ok.png";
 
-export const deleted = "https://img.icons8.com/dusk/64/000000/delete-sign.png";
+export const deleted = "https://img.icons8.com/dusk/30/000000/delete-sign.png";
 
 export const share = "https://img.icons8.com/dusk/64/000000/share-2.png";
 
