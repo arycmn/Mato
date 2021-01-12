@@ -1,5 +1,10 @@
+import FavoriteIcon from "./components/atoms/FavoriteIcon";
 function App() {
-  return <div>Hello world!</div>;
+  return (
+    <div>
+      <FavoriteIcon />
+    </div>
+  );
 }
 
 export default App;
