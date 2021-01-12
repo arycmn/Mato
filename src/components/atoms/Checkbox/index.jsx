@@ -4,8 +4,8 @@ import { checkedIcon, uncheckedIcon } from "../../../icons";
 const Checkbox = ({ onClick, status }) => {
   return (
     <Container onClick={onClick} status={status}>
-      {status === "checked" ? (
-        <img src={checkedIcon} alt="Checked" />
+      {status ? (
+        <img src={checkedIcon} alt="checked" />
       ) : (
         <img src={uncheckedIcon} alt="unchecked" />
       )}
