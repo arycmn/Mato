@@ -4,6 +4,7 @@ export const Container = styled.div`
     margin:auto;
     width:340px;
     height:340px;
+    margin-top:50px;
 `;
 
 export const PictureContainer = styled.div`
