@@ -1,4 +1,4 @@
-import { Container,LocationName,LocationDescription } from "./style";
+import { Container,LocationName,LocationDescription,ButtonContainer } from "./style";
 import Picture from '../../atoms/Picture'
 import Button from '../../atoms/Button'
 
@@ -19,15 +19,20 @@ const LocationCard = ({ src,locationName, locationDescription }) => {
           locationName
         }
       </LocationName>
-      <LocationDescription>{locationDescription.length > 25 ? 
+      <LocationDescription>{locationDescription.length > 17 ? 
               `${locationDescription.trim()
                 .split('')
-                .splice(0,30)
+                .splice(0,17)
                 .join("")
                 .trim()}...` : 
                 locationDescription
               }</LocationDescription>
-      <Button>Learn More</Button>
+      <ButtonContainer>
+        <Button 
+          width={'132px'}
+          height={'42px'}
+        >Learn More</Button>
+      </ButtonContainer>
   </Container>);
 };
 
