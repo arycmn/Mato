@@ -10,9 +10,9 @@ const FavoriteIcon = () => {
       }}
     >
       {Checked ? (
-        <img src={favoriteFull}></img>
+        <img src={favoriteFull} alt=""></img>
       ) : (
-        <img src={favoriteEmpty}></img>
+        <img src={favoriteEmpty} alt=""></img>
       )}
     </Container>
   );

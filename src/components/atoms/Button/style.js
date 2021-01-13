@@ -14,7 +14,6 @@ export const Container = styled.button`
 
   @media (min-width: 640px) {
     width: 180px;
-    color: black;
     background: transparent;
     border: ${({ type }) => (type === "icon" ? "none" : "1px solid #f5f5f5")};
   }
