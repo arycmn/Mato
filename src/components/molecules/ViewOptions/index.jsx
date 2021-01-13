@@ -1,5 +1,5 @@
 import { Container,Icon,LeftFilter,RightFilter } from "./style";
-import { easyToFind,map } from '../../../icons'
+import { easyToFind,map } from '../../../utils/icons'
 import { useState } from 'react'
 
 const ViewOptions = ({ props }) => {
