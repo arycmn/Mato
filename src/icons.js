@@ -52,6 +52,14 @@ export const checkedIcon = "https://img.icons8.com/dusk/30/000000/ok.png";
 
 export const deleted = "https://img.icons8.com/dusk/30/000000/delete-sign.png";
 
+export const email = "https://img.icons8.com/dusk/64/000000/email.png";
+
+export const name = "https://img.icons8.com/dusk/50/000000/dog-tag.png";
+
+export const password = "https://img.icons8.com/dusk/64/000000/password.png";
+
+export const confirmPassword = "https://img.icons8.com/dusk/64/000000/lock.png";
+
 export const share = "https://img.icons8.com/dusk/64/000000/share-2.png";
 
 export const calendar =
