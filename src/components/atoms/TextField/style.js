@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #1f2d1d;
   opacity: 0.7;
-  margin: auto;
   width: 240px;
   height: 36px;
   display: flex;
   align-items: center;
   padding: 0 8px;
   border-radius: 12px;
+  margin: 10px;
 
   input {
     border: none;
