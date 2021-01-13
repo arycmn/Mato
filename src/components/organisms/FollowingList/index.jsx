@@ -1,11 +1,14 @@
-import {Container} from './style'
+import { Container } from "./style";
+import FriendCard from "../../molecules/FriendCard";
 
-const FollowingList = ({data})=>{
-    return <Container>
-        {data.map((user)=>(
-            
-        ))}
+const FollowingList = ({ data }) => {
+  return (
+    <Container>
+      {data.map((user) => (
+        <FriendCard imgUrl={user.image_url} name={user.name} />
+      ))}
     </Container>
-}
+  );
+};
 
-export default FollowingList
+export default FollowingList;
