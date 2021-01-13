@@ -1,7 +1,6 @@
-import { useState } from "react";
-
+import GlobalStyle from "./styles/global";
 function App() {
-  return <div>Hello world!</div>;
+  return <div>hello world</div>;
 }
 
 export default App;

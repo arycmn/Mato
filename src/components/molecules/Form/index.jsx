@@ -1,5 +1,5 @@
-import { Container, Par } from "./style";
-import { useForm, useHistory } from "react-hook-form";
+import { Container, Par, ButtonContainer } from "./style";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../atoms/Button";
@@ -42,49 +42,57 @@ const Register = (props) => {
   });
 
   return (
-    <form onSubmit={handleSubmit()}>
-      <div>
-        <TextField
-          placeholderText="Nome de usuário"
-          inputRef={register}
-          name="user"
-          icon={profile}
-        />
-        <Par> {errors.user?.message}</Par>
+    <Container>
+      <form onSubmit={handleSubmit()}>
+        <div>
+          <TextField
+            placeholderText="Nome de usuário"
+            inputRef={register}
+            name="user"
+            icon={profile}
+          />
+          <Par> {errors.user?.message}</Par>
 
-        <TextField
-          placeholderText="Nome Completo"
-          inputRef={register}
-          name="name"
-          icon={name}
-        />
-        <Par> {errors.name?.message}</Par>
+          <TextField
+            placeholderText="Nome Completo"
+            inputRef={register}
+            name="name"
+            icon={name}
+          />
+          <Par> {errors.name?.message}</Par>
 
-        <TextField
-          placeholderText="Email"
-          inputRef={register}
-          name="email"
-          icon={email}
-        />
-        <Par> {errors.email?.message}</Par>
+          <TextField
+            placeholderText="Email"
+            inputRef={register}
+            name="email"
+            icon={email}
+          />
+          <Par> {errors.email?.message}</Par>
 
-        <TextField
-          placeholderTextl="Senha"
-          inputRef={register}
-          name="password"
-          icon={password}
-        />
-        <Par> {errors.senha?.message}</Par>
+          <TextField
+            placeholderText="Senha"
+            inputRef={register}
+            name="password"
+            icon={password}
+          />
+          <Par> {errors.senha?.message}</Par>
 
-        <TextField
-          placeholderText="Confirmar senha"
-          name="passwordConfirm"
-          inputRef={register}
-          icon={confirmPassword}
-        />
-        <Par>{errors.passwordConfirm?.message}</Par>
-      </div>
-      <Button type="submit">Enviar</Button>
-    </form>
+          <TextField
+            placeholderText="Confirmar senha"
+            name="passwordConfirm"
+            inputRef={register}
+            icon={confirmPassword}
+          />
+          <Par>{errors.passwordConfirm?.message}</Par>
+        </div>
+        <ButtonContainer>
+          <Button type="submit" round={12}>
+            Enviar
+          </Button>
+        </ButtonContainer>
+      </form>
+    </Container>
   );
 };
+
+export default Register;
