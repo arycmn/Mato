@@ -1,8 +1,8 @@
 import { Container } from "./style";
 
-const Button = ({ children, onClick, type, icon, round }) => {
+const Button = ({ children, onClick, type, icon, round ,height, width }) => {
   return (
-    <Container onClick={onClick} round={round} type={type}>
+    <Container width={width} height={height} onClick={onClick} round={round} type={type}>
       {type === "icon" ? <img src={icon} alt="Button" /> : children}
     </Container>
   );

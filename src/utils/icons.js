@@ -17,6 +17,8 @@ export const lake = "https://img.icons8.com/dusk/64/000000/swamp.png";
 export const ticketNeeded =
   "https://img.icons8.com/dusk/64/000000/add-ticket.png";
 
+export const map = "https://img.icons8.com/dusk/64/000000/map.png"
+
 export const noTicketNeeded =
   "https://img.icons8.com/dusk/64/000000/delete-ticket.png";
 
@@ -52,6 +54,14 @@ export const checkedIcon = "https://img.icons8.com/dusk/30/000000/ok.png";
 
 export const deleted = "https://img.icons8.com/dusk/30/000000/delete-sign.png";
 
+export const email = "https://img.icons8.com/dusk/64/000000/email.png";
+
+export const name = "https://img.icons8.com/dusk/50/000000/dog-tag.png";
+
+export const password = "https://img.icons8.com/dusk/64/000000/password.png";
+
+export const confirmPassword = "https://img.icons8.com/dusk/64/000000/lock.png";
+
 export const share = "https://img.icons8.com/dusk/64/000000/share-2.png";
 
 export const calendar =
@@ -66,7 +76,7 @@ export const friends =
 
 export const favoriteFull = "https://img.icons8.com/dusk/64/000000/like.png";
 
-export const favoriteEmpty = "https://img.icons8.com/wired/64/000000/like.png";
+export const favoriteEmpty = "https://img.icons8.com/wired/42/000000/like.png";
 
 export const cycling = "https://img.icons8.com/dusk/64/000000/bicycle.png";
 

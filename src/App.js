@@ -1,10 +1,9 @@
-import Map from "./components/molecules/Map";
+import GlobalStyle from "./styles/global";
 
 function App() {
   return (
     <div>
-      Hello World!
-      <Map />
+      <GlobalStyle />
     </div>
   );
 }

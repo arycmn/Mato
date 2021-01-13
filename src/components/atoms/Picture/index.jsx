@@ -13,7 +13,7 @@ const Picture = ({
   textWeight,
 }) => {
   return (
-    <Container>
+    <Container >
       <img
         src={src}
         alt={alt}
@@ -21,7 +21,6 @@ const Picture = ({
         height={height}
         width={width}
       />
-
       {filter && (
         <Filter
           height={height}
