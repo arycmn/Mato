@@ -4,7 +4,12 @@ import Picture from "../../atoms/Picture";
 const FriendCard = ({ imgUrl, name }) => {
   return (
     <Container>
-      <Picture src={imgUrl}></Picture>
+      <Picture
+        width="72px"
+        height="72px"
+        pictureType="profile"
+        src="https://dev.observatoriodocinema.bol.uol.com.br/wp-content/uploads/2017/12/8-avatar.jpg"
+      ></Picture>
       <Name>Nome Sobrenome</Name>
       <Button>Unfollow</Button>
     </Container>
