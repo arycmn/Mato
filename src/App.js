@@ -1,8 +1,5 @@
-import Calendar from './components/atoms/Calendar'
-import LocationCard from './components/molecules/LocationCard';
-
 function App() {
-  return <LocationCard/>;
+  return <div>Hello World!</div>;
 }
 
 export default App;
