@@ -1,39 +1,40 @@
 import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
+import MainContent from "../../components/templates/MainContent";
+import FooterMenu from "../../components/molecules/FooterMenu";
 
 const Following = () => {
   const data = [
     {
       name: "Jorge",
-      image_url:
-        "https://www.pexels.com/photo/bald-man-with-a-serious-facial-expression-2380794/",
+      image_url: "https://picsum.photos/200",
     },
     {
       name: "Marcos",
-      image_url:
-        "https://www.pexels.com/photo/closeup-photo-of-man-s-face-2099225/",
+      image_url: "https://picsum.photos/200",
     },
     {
       name: "Silvia",
-      image_url:
-        "https://www.pexels.com/photo/women-s-white-framed-sunglasses-2690323/",
+      image_url: "https://picsum.photos/200",
     },
     {
       name: "Mario",
-      image_url: "https://www.pexels.com/photo/collage-photo-of-woman-3812743/",
+      image_url: "https://picsum.photos/200",
     },
     {
       name: "Silvio",
-      image_url:
-        "https://www.pexels.com/photo/man-cross-legs-seating-on-white-wooden-chair-1270076/",
+      image_url: "https://picsum.photos/200",
     },
   ];
 
   return (
     <Container>
       <h1>Welcome $name</h1>
-      <h2>Following</h2>
-      <FollowingList data={data} />
+      <MainContent>
+        <h2>Following</h2>
+        <FollowingList data={data} />
+      </MainContent>
+      <FooterMenu />
     </Container>
   );
 };
