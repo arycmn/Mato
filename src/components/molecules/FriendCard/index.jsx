@@ -1,6 +1,7 @@
-import { Container, Name } from "./style";
+import { Container, Name, ButtonContainer } from "./style";
 import Button from "../../atoms/Button";
 import Picture from "../../atoms/Picture";
+
 const FriendCard = ({ imgUrl, name }) => {
   return (
     <Container>
@@ -8,10 +9,13 @@ const FriendCard = ({ imgUrl, name }) => {
         width="72px"
         height="72px"
         pictureType="profile"
-        src="https://dev.observatoriodocinema.bol.uol.com.br/wp-content/uploads/2017/12/8-avatar.jpg"
+        src={imgUrl}
       ></Picture>
-      <Name>Nome Sobrenome</Name>
-      <Button>Unfollow</Button>
+      <Name>{name}</Name>
+        <Button         
+          width="92px"
+          height="32px"
+        >Unfollow</Button>
     </Container>
   );
 };
