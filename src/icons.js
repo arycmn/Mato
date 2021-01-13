@@ -73,3 +73,11 @@ export const cycling = "https://img.icons8.com/dusk/64/000000/bicycle.png";
 export const run = "https://img.icons8.com/dusk/64/000000/running.png";
 
 export const sneakers = "https://img.icons8.com/dusk/64/000000/sneakers.png";
+
+export const home = "https://img.icons8.com/dusk/64/000000/home.png";
+
+export const logout =
+  "https://img.icons8.com/dusk/64/000000/logout-rounded-up.png";
+
+export const login =
+  "https://img.icons8.com/dusk/64/000000/login-rounded-down.png";
