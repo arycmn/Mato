@@ -76,7 +76,7 @@ export const friends =
 
 export const favoriteFull = "https://img.icons8.com/dusk/64/000000/like.png";
 
-export const favoriteEmpty = "https://img.icons8.com/wired/64/000000/like.png";
+export const favoriteEmpty = "https://img.icons8.com/wired/42/000000/like.png";
 
 export const cycling = "https://img.icons8.com/dusk/64/000000/bicycle.png";
 
