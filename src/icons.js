@@ -74,11 +74,10 @@ export const run = "https://img.icons8.com/dusk/64/000000/running.png";
 
 export const sneakers = "https://img.icons8.com/dusk/64/000000/sneakers.png";
 
-<<<<<<< HEAD
 export const hiking = "https://img.icons8.com/dusk/64/000000/trekking.png";
 
 export const board = "https://img.icons8.com/dusk/64/000000/snowboarding.png";
-=======
+
 export const home = "https://img.icons8.com/dusk/64/000000/home.png";
 
 export const logout =
@@ -86,4 +85,3 @@ export const logout =
 
 export const login =
   "https://img.icons8.com/dusk/64/000000/login-rounded-down.png";
->>>>>>> 5b5636f50d38dee3849572537b6c4f4b3fa17221
