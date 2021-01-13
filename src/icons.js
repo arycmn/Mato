@@ -17,6 +17,8 @@ export const lake = "https://img.icons8.com/dusk/64/000000/swamp.png";
 export const ticketNeeded =
   "https://img.icons8.com/dusk/64/000000/add-ticket.png";
 
+export const map = "https://img.icons8.com/dusk/64/000000/map.png"
+
 export const noTicketNeeded =
   "https://img.icons8.com/dusk/64/000000/delete-ticket.png";
 
