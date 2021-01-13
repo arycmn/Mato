@@ -1,5 +1,12 @@
 import { Container } from "./style";
-import { run, cycling, swimming, fishing, hiking, board } from "../../../icons";
+import {
+  run,
+  cycling,
+  swimming,
+  fishing,
+  hiking,
+  board,
+} from "../../../utils/icons";
 import LocalActivity from "../../atoms/LocalActivity";
 
 const LocalActivityList = ({ activityID }) => {
