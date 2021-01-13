@@ -1,5 +1,5 @@
 import { Container } from "./style";
-import { checkedIcon, uncheckedIcon } from "../../../icons";
+import { checkedIcon, uncheckedIcon } from "../../../utils/icons";
 
 const Checkbox = ({ onClick, status }) => {
   return (
