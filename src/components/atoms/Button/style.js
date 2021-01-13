@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  width: ${({ type }) => (type === "icon" ? "42px" : "220px")};
-  height: 42px;
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
   font-size: 18px;
   border: none;
   background: #3a613e;
