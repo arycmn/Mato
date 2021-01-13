@@ -9,6 +9,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   padding: 0 8px;
+  border-radius: 12px;
+
   input {
     border: none;
     outline: none;
