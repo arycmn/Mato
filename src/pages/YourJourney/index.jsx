@@ -61,15 +61,17 @@ const YourJourney = () => {
                         <LocationList data={data}>
                         </LocationList>}
                 {viewDisplay.selectedView === 'map' &&
-                        <MapComponent/>
+                <>
+                    <MapComponent/>
+                    <ButtonContainer>
+                        <Button 
+                            width={'220px'}
+                            height={'56px'}
+                            round
+                        >Choose</Button>
+                    </ButtonContainer>
+                </>
                 }
-                <ButtonContainer>
-                    <Button 
-                        width={'220px'}
-                        height={'56px'}
-                        round
-                    >Choose</Button>
-                </ButtonContainer>
             </MainContent>
             <FooterMenu></FooterMenu>
         </Container>
