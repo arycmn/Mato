@@ -1,9 +1,8 @@
-import { Children } from 'react'
 import { Container } from './style'
 
-const MainContent = ({Children}) => {
+const MainContent = ({children}) => {
     return <Container>
-        {Children}
+        {children}
     </Container>
 }
 

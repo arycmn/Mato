@@ -6,5 +6,5 @@ export const Container = styled.div`
     border-radius: 30px 30px 0px 0px ;
     height:fit-content;
     bottom: 0px;
-    padding: 5px;
+    padding: 15px;
 `;
