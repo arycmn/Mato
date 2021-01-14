@@ -8,9 +8,9 @@ const FriendCard = ({ imgUrl, name }) => {
         width="72px"
         height="72px"
         pictureType="profile"
-        src="https://dev.observatoriodocinema.bol.uol.com.br/wp-content/uploads/2017/12/8-avatar.jpg"
+        src={imgUrl}
       ></Picture>
-      <Name>Nome Sobrenome</Name>
+      <Name>{name}</Name>
       <Button>Unfollow</Button>
     </Container>
   );
