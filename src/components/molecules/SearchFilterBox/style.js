@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 320px;
-  height: 380px;
+  margin: 10px auto 0;
+  width: 85%;
+  background: #3a613e;
+  filter: opacity(87%);
+  padding: 5px;
 `;
+
 export const Fragment = styled.div`
   > .Button {
     outline: none;
@@ -13,6 +17,11 @@ export const Fragment = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #f5f5f5;
+    font-size: 1.2rem;
+    font-family: Poppings, sans-serif;
+    margin: 5px 0;
+
     > img {
       width: 25px;
       height: 25px;
