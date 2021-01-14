@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.button`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
+  width: ${({ type }) => (type === "icon" ? "42px" : "220px")};
+  height: 62px;
   font-size: 18px;
   border: none;
-  background: #3a613e;
+  background: #ffffff;
   opacity: 85%;
   border-radius: ${({ round }) => (round ? "50px" : 0)};
-  color: #f5f5f5;
+  margin: 10px;
+  color: black;
   outline: none;
+  padding: 10px;
+  box-sizing: content-box;
+
   cursor: pointer;
 
   @media (min-width: 640px) {
