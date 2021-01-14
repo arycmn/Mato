@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import YourJourney from "../pages/YourJourney";
 
 const Routes = () => {
   return <Switch>
@@ -6,7 +7,7 @@ const Routes = () => {
     <Route exact path='/login'/>
     <Route exact path='/profile'/>
     <Route exact path='/following'/>
-    <Route exact path='/your-journey'/>
+    <Route exact path='/your-journey' component={YourJourney}/>
     <Route exact path='/user-interests'/>
     <Route exact path='/invite'/>
     <Route exact path='/search'/>
