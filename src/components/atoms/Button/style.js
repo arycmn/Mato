@@ -2,16 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.button`
   width: ${({ type }) => (type === "icon" ? "42px" : "220px")};
-  height: 62px;
+  height: 32px;
   font-size: 18px;
   border: none;
-  background: #ffffff;
+  background: #3a613e;
   opacity: 85%;
   border-radius: ${({ round }) => (round ? "50px" : 0)};
   margin: 10px;
-  color: black;
+  color: #f5f5f5;
   outline: none;
-  padding: 10px;
   box-sizing: content-box;
 
   cursor: pointer;

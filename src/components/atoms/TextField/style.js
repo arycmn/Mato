@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #1f2d1d;
   opacity: 0.7;
-  width: 240px;
+  width: ${({ width }) => (width ? `${width}%` : "240px")};
   height: 36px;
   display: flex;
   align-items: center;

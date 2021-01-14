@@ -1,5 +1,8 @@
 import { Switch, Route } from "react-router-dom";
+
 import Following from "../pages/Following";
+import Search from "../pages/Search";
+
 import Location from "../pages/Location";
 const Routes = () => {
   return (
@@ -11,7 +14,7 @@ const Routes = () => {
       <Route exact path="/your-journey" />
       <Route exact path="/user-interests" />
       <Route exact path="/invite" />
-      <Route exact path="/search" />
+      <Route exact path="/search" component={Search} />
       <Route exact path="/news" />
       <Route exact path="/location/:id" component={Location} />
       <Route exact path="/reservation/:id" />
