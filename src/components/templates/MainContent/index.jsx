@@ -1,10 +1,7 @@
-import { Children } from 'react'
-import { Container } from './style'
+import { Container } from "./style";
 
-const MainContent = ({Children}) => {
-    return <Container>
-        {Children}
-    </Container>
-}
+const MainContent = ({ children }) => {
+  return <Container>{children}</Container>;
+};
 
-export default MainContent
+export default MainContent;

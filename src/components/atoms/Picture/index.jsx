@@ -13,7 +13,7 @@ const Picture = ({
   textWeight,
 }) => {
   return (
-    <Container >
+    <Container>
       <img
         src={src}
         alt={alt}
