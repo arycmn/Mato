@@ -12,10 +12,11 @@ export const Fragment = styled.div`
   > .Button {
     outline: none;
     border: 0;
+    width: 100%;
     background: transparent;
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     color: #f5f5f5;
     font-size: 1.2rem;

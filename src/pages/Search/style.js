@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* padding-top: 10px; */
-
   div:first-child {
     margin: 0 auto;
   }
@@ -21,8 +19,8 @@ export const Title = styled.h1`
 
 export const LocationList = styled.div`
   width: 90%;
-  height: 70vh;
-  margin: 10px auto 0;
+  height: ${({ minimized }) => (minimized ? "35vh" : "70vh")};
+  margin: 5px auto 0;
   overflow-y: scroll;
 
   ::-webkit-scrollbar {

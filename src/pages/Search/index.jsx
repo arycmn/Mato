@@ -87,7 +87,7 @@ const Search = () => {
 
       {showFilters && <SearchFilterBox />}
 
-      <LocationList>
+      <LocationList minimized={showFilters}>
         {locations.map((location) => (
           <Picture
             src={location.url}
