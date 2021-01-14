@@ -21,8 +21,9 @@ const LocalActivityList = ({ activityID }) => {
 
   return (
     <Container>
-      {activityID.map((activity) => (
+      {activityID.map((activity, index) => (
         <LocalActivity
+          key={index}
           icon={reference[activity].icon}
           title={reference[activity].name}
         />
