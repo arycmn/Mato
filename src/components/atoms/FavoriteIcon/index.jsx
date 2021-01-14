@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container } from "./style";
-import { favoriteFull, favoriteEmpty } from "../../../icons";
+import { favoriteFull, favoriteEmpty } from "../../../utils/icons";
 const FavoriteIcon = () => {
   const [Checked, NewChecked] = useState(false);
   return (

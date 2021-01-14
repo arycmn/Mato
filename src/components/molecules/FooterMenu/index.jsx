@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { Container } from "./style";
 
-import { profile, search, home, logout } from "../../../icons";
+import { profile, search, home, logout } from "../../../utils/icons";
 
 const FooterMenu = () => {
   const history = useHistory();

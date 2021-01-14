@@ -1,7 +1,13 @@
-import FriendCard from "./components/molecules/FriendCard";
+import GlobalStyle from "./styles/global";
+import Routes from "./routes";
 
 function App() {
-  return <FriendCard />;
+  return (
+    <>
+      <GlobalStyle />
+      <Routes />
+    </>
+  );
 }
 
 export default App;

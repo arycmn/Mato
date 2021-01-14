@@ -21,7 +21,6 @@ const Picture = ({
         height={height}
         width={width}
       />
-
       {filter && (
         <Filter
           height={height}
