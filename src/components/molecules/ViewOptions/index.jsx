@@ -1,6 +1,6 @@
 import { Container,Icon,LeftFilter,RightFilter } from "./style";
 import { easyToFind,map } from '../../../utils/icons'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { storeViewDisplayPreferences } from '../../../store/modules/viewDisplayPreference/actions' 
 import { useDispatch } from 'react-redux'
 
@@ -8,9 +8,12 @@ import { useDispatch } from 'react-redux'
 const ViewOptions = ({ props }) => {
 
     const dispatch = useDispatch()
+    
+    useEffect(()=>{
+        dispatch(storeViewDisplayPreferences({selectedView:'list'}))
+    },[])
 
     const [Selected, setSelected] = useState('list')
-    
     const selectMapView = () => {
         if(Selected === 'list'){
             setSelected('map')
