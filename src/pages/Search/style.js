@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 20px;
+  /* padding-top: 10px; */
 
   div:first-child {
     margin: 0 auto;
   }
 
   button {
+    width: 80px;
     margin-left: 15px;
   }
 `;
@@ -20,7 +21,7 @@ export const Title = styled.h1`
 
 export const LocationList = styled.div`
   width: 90%;
-  height: 75vh;
+  height: 70vh;
   margin: 10px auto 0;
   overflow-y: scroll;
 
