@@ -11,4 +11,7 @@ export const Container = styled.div`
     border-radius: 50%;
   }
 `;
-export const Name = styled.div``;
+
+export const Name = styled.div`
+  font-size:22px;
+`;

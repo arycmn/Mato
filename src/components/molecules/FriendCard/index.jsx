@@ -1,6 +1,7 @@
-import { Container, Name } from "./style";
+import { Container, Name, ButtonContainer } from "./style";
 import Button from "../../atoms/Button";
 import Picture from "../../atoms/Picture";
+
 const FriendCard = ({ imgUrl, name }) => {
   return (
     <Container>
@@ -11,7 +12,9 @@ const FriendCard = ({ imgUrl, name }) => {
         src={imgUrl}
       ></Picture>
       <Name>{name}</Name>
-      <Button>Unfollow</Button>
+      <Button width="92px" height="32px">
+        Unfollow
+      </Button>
     </Container>
   );
 };
