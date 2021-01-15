@@ -3,18 +3,30 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  flex-wrap: wrap;
   padding: 20px;
   border-radius: 10px;
   border: 50px;
 `;
 
-export const ButtonContainer = styled.div`
+export const PlacesContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: auto;
-  width: 220px;
+  width: 280px;
+  height: 200px;
+  margin-top: 10px;
+`;
+export const ActivityContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 280px;
+  height: 300px;
+  margin-top: 10px;
 `;
 export const Title = styled.div`
   font-weight: bold;
@@ -26,15 +38,15 @@ export const Button = styled.button`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: bottom;
-  width: max-content;
-  height: 62px;
+  justify-content: center;
+  width: 90px;
+  height: 70px;
   font-size: 18px;
   border: none;
   opacity: 85%;
   border-radius: 15px;
-  margin: 10px;
-  color: black;
+  margin: 0 10px;
+  color: #3a613e;
   outline: none;
   padding: 10px;
   box-sizing: content-box;

@@ -1,4 +1,10 @@
-import { Container, ButtonContainer, Title, Button } from "./style";
+import {
+  Container,
+  PlacesContainer,
+  ActivityContainer,
+  Title,
+  Button,
+} from "./style";
 import {
   beach,
   mountain,
@@ -16,7 +22,7 @@ const Interest = () => {
   return (
     <Container>
       <Title> Lugares favoritos </Title>
-      <ButtonContainer>
+      <PlacesContainer>
         <Button>
           <div>
             Montanhas <br />
@@ -25,7 +31,7 @@ const Interest = () => {
         </Button>
         <Button>
           <div>
-            Lagos e Rios <br />
+            Rios <br />
             <img src={lake} alt="Button" text={"lake"} />
           </div>
         </Button>
@@ -41,16 +47,46 @@ const Interest = () => {
             <img src={beach} alt="Button" />
           </div>
         </Button>
-      </ButtonContainer>
+      </PlacesContainer>
       <Title> Atividades favoritas </Title>
-      <ButtonContainer>
-        <Button type="icon" icon={hiking}></Button>
-        <Button type="icon" icon={run}></Button>
-        <Button type="icon" icon={swimming}></Button>
-        <Button type="icon" icon={fishing} />
-        <Button type="icon" icon={board} />
-        <Button type="icon" icon={cycling} />
-      </ButtonContainer>
+      <ActivityContainer>
+        <Button>
+          <div>
+            Trilhas <br />
+            <img src={hiking} alt="Button" />
+          </div>
+        </Button>
+        <Button>
+          <div>
+            Ciclismo <br />
+            <img src={cycling} alt="Button" />
+          </div>
+        </Button>
+        <Button>
+          <div>
+            Natação <br />
+            <img src={swimming} alt="Button" />
+          </div>
+        </Button>
+        <Button>
+          <div>
+            Pesca <br />
+            <img src={fishing} alt="Button" />
+          </div>
+        </Button>
+        <Button>
+          <div>
+            Surf <br />
+            <img src={board} alt="Button" />
+          </div>
+        </Button>
+        <Button>
+          <div>
+            Corrida <br />
+            <img src={run} alt="Button" />
+          </div>
+        </Button>
+      </ActivityContainer>
     </Container>
   );
 };
