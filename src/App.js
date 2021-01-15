@@ -4,11 +4,11 @@ import UserInterest from "./pages/UserInterests";
 
 function App() {
   return (
-    <>
+    <div id="bg-filter">
       <GlobalStyle />
       <Routes />
       <UserInterest />
-    </>
+    </div>
   );
 }
 

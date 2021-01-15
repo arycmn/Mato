@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid black;
   display: flex;
-  width: fit-content;
-  height: fit-content;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 90vw;
+  margin: auto;
+  > div {
+    width: 80px;
+    margin: 10px;
+  }
 `;
