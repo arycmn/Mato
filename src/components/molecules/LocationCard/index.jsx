@@ -1,39 +1,43 @@
-import { Container,LocationName,LocationDescription,ButtonContainer } from "./style";
-import Picture from '../../atoms/Picture'
-import Button from '../../atoms/Button'
+import {
+  Container,
+  LocationName,
+  LocationDescription,
+  ButtonContainer,
+} from "./style";
+import Picture from "../../atoms/Picture";
+import Button from "../../atoms/Button";
 
-const LocationCard = ({ src,locationName, locationDescription }) => {
-  return (<Container>
+const LocationCard = ({ src, locationName, locationDescription }) => {
+  return (
+    <Container>
       <Picture
         src={src}
-        pictureType={'location'}
-        height={'100px'}
-        width={'100px'}
+        picturetype={"location"}
+        height={"100px"}
+        width={"100px"}
       />
-      <LocationName>{locationName.length > 13 ? 
-        `${locationName.trim()
-          .split('')
-          .splice(0,13)
-          .join("")
-          .trim()}...` : 
-          locationName
-        }
+      <LocationName>
+        {locationName.length > 13
+          ? `${locationName.trim().split("").splice(0, 13).join("").trim()}...`
+          : locationName}
       </LocationName>
-      <LocationDescription>{locationDescription.length > 17 ? 
-              `${locationDescription.trim()
-                .split('')
-                .splice(0,17)
-                .join("")
-                .trim()}...` : 
-                locationDescription
-              }</LocationDescription>
+      <LocationDescription>
+        {locationDescription.length > 17
+          ? `${locationDescription
+              .trim()
+              .split("")
+              .splice(0, 17)
+              .join("")
+              .trim()}...`
+          : locationDescription}
+      </LocationDescription>
       <ButtonContainer>
-        <Button 
-          width={'132px'}
-          height={'42px'}
-        >Learn More</Button>
+        <Button width={"132px"} height={"42px"}>
+          Learn More
+        </Button>
       </ButtonContainer>
-  </Container>);
+    </Container>
+  );
 };
 
 export default LocationCard;

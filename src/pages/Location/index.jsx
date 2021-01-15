@@ -4,7 +4,9 @@ import Picture from "../../components/atoms/Picture";
 import Button from "../../components/atoms/Button";
 import MainContent from "../../components/templates/MainContent";
 import LocalActivityList from "../../components/molecules/LocalActivityList";
+import FooterMenu from "../../components/molecules/FooterMenu";
 import { Title, LocalActivies, Container, LearnMoreText } from "./style";
+
 const Location = () => {
   const [LearnMore, SetLearnMore] = useState(false);
   const obj = {
@@ -25,38 +27,38 @@ const Location = () => {
     pictureSrc: "https://picsum.photos/200",
   };
   return (
-    <div>
+    <Container>
       <Title>
-        Location <FavoriteIcon />
+        <div>Location</div>
+        <FavoriteIcon />
       </Title>
-      <Container>
-        <MainContent>
-          <Picture
-            alt={"Location Picture"}
-            src={obj.pictureSrc}
-            pictureType={"location"}
-            height={"220px"}
-            width={"300px"}
-          ></Picture>
-          {LearnMore ? (
-            <LearnMoreText>
-              <div>{obj.description}</div>
-              <div onClick={() => SetLearnMore(!LearnMore)}>Hide</div>
-            </LearnMoreText>
-          ) : (
-            <LearnMoreText>
-              <div>{obj.description.split("").splice(0, 35).join("")}...</div>
-              <div onClick={() => SetLearnMore(!LearnMore)}>LearnMore</div>
-            </LearnMoreText>
-          )}
-          <LocalActivies>Local Activies</LocalActivies>
-          <LocalActivityList activityID={[1, 2, 3, 4, 5]}></LocalActivityList>
-          <Button width={"267px"} height={"52px"} round>
-            Continue
-          </Button>
-        </MainContent>
-      </Container>
-    </div>
+      <MainContent>
+        <Picture
+          alt={"Location Picture"}
+          src={obj.pictureSrc}
+          picturetype={"location"}
+          height={"220px"}
+          width={"300px"}
+        ></Picture>
+        {LearnMore ? (
+          <LearnMoreText>
+            <div>{obj.description}</div>
+            <div onClick={() => SetLearnMore(!LearnMore)}>Hide</div>
+          </LearnMoreText>
+        ) : (
+          <LearnMoreText>
+            <div>{obj.description.split("").splice(0, 35).join("")}...</div>
+            <div onClick={() => SetLearnMore(!LearnMore)}>LearnMore</div>
+          </LearnMoreText>
+        )}
+        <LocalActivies>Local Activies</LocalActivies>
+        <LocalActivityList activityID={[1, 2, 3, 4, 5]}></LocalActivityList>
+        <Button width={"267px"} height={"52px"} round>
+          Continue
+        </Button>
+      </MainContent>
+      <FooterMenu />
+    </Container>
   );
 };
 export default Location;
