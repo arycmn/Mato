@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import { Container, LocationList, Title } from "./style";
@@ -11,8 +11,86 @@ import SearchFilterBox from "../../components/molecules/SearchFilterBox";
 import Picture from "../../components/atoms/Picture";
 import FooterMenu from "../../components/molecules/FooterMenu";
 
+const locations = [
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 1",
+    id: 1,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 2",
+    id: 2,
+  },
+  {
+    url: "https://picsum.photos/150",
+    id: 3,
+    nome: "Location 3",
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 4",
+    id: 4,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 5",
+    id: 5,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 6",
+    id: 6,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 7",
+    id: 7,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 8",
+    id: 8,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 9",
+    id: 9,
+  },
+  {
+    url: "https://picsum.photos/150",
+    nome: "Location 10",
+    id: 10,
+  },
+  {
+    url: "https://picsum.photos/150",
+    id: 11,
+    nome: "Location 11",
+  },
+  {
+    id: 12,
+    url: "https://picsum.photos/150",
+    nome: "Location 12",
+  },
+  {
+    id: 13,
+    url: "https://picsum.photos/150",
+    nome: "Location 13",
+  },
+];
+
 const Search = () => {
   const [showFilters, setShowFilters] = useState(false);
+  const [searchText, setSearchText] = useState("");
+  const [wantedPlaces, setWantedPlaces] = useState(locations);
+
+  useEffect(() => {
+    const newList = locations.filter((location) =>
+      location.nome.includes(searchText)
+    );
+
+    setWantedPlaces(newList);
+  }, [searchText]);
 
   const history = useHistory();
 
@@ -24,74 +102,6 @@ const Search = () => {
     history.push(`/location/${id}`);
   };
 
-  const locations = [
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 1,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 2,
-    },
-    {
-      url: "https://picsum.photos/150",
-      id: 3,
-      nome: "Location",
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 4,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 5,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 6,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 7,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 8,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 9,
-    },
-    {
-      url: "https://picsum.photos/150",
-      nome: "Location",
-      id: 10,
-    },
-    {
-      url: "https://picsum.photos/150",
-      id: 11,
-      nome: "Location",
-    },
-    {
-      id: 12,
-      url: "https://picsum.photos/150",
-      nome: "Location",
-    },
-    {
-      id: 13,
-      url: "https://picsum.photos/150",
-      nome: "Location",
-    },
-  ];
-
   return (
     <Container>
       <Title>Pesquisa</Title>
@@ -100,6 +110,8 @@ const Search = () => {
         icon={search}
         type="search"
         width={90}
+        value={searchText}
+        onChange={(e) => setSearchText(e.target.value)}
       />
       <Button width="100px" onClick={handleClickShowFilters}>
         Filtrar
@@ -108,7 +120,7 @@ const Search = () => {
       {showFilters && <SearchFilterBox />}
 
       <LocationList minimized={showFilters}>
-        {locations.map((location, index) => (
+        {wantedPlaces.map((location, index) => (
           <Picture
             key={index}
             src={location.url}
