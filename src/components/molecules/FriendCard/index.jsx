@@ -1,4 +1,4 @@
-import { Container, Name, ButtonContainer } from "./style";
+import { Container, Name } from "./style";
 import Button from "../../atoms/Button";
 import Picture from "../../atoms/Picture";
 
