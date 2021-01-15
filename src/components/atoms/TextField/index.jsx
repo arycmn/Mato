@@ -1,10 +1,10 @@
 import { Container } from "./style";
 
-const TextField = ({ icon, placeholderText }) => {
+const TextField = ({ icon, placeholderText, type = "text", width }) => {
   return (
-    <Container>
+    <Container width={width}>
       <img src={icon} alt="icon" />
-      <input type="text" placeholder={placeholderText}></input>
+      <input type={type} placeholder={placeholderText}></input>
     </Container>
   );
 };

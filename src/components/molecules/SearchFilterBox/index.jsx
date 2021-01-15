@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Fragment } from "./style";
-import { unckecked, checked } from "../../../icons";
+import { uncheckedIcon, checkedIcon } from "../../../utils/icons";
 
 const SearchFilterBox = () => {
   const [Horse, SetHorse] = useState(false);
@@ -21,9 +21,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Horse ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="noCheck"></img>
+            <img src={uncheckedIcon} alt="noCheck"></img>
           )}
           Horseback riding
         </button>
@@ -36,9 +36,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Relaxation ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="NoCheck"></img>
+            <img src={uncheckedIcon} alt="NoCheck"></img>
           )}
           Relaxation
         </button>
@@ -51,9 +51,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Fishing ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="NoCheck"></img>
+            <img src={uncheckedIcon} alt="NoCheck"></img>
           )}
           Fishing
         </button>
@@ -66,9 +66,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Climbing ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="NoCheck"></img>
+            <img src={uncheckedIcon} alt="NoCheck"></img>
           )}
           Climbing
         </button>
@@ -81,9 +81,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Exploration ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="NoCheck"></img>
+            <img src={uncheckedIcon} alt="NoCheck"></img>
           )}
           Guided Exploration
         </button>
@@ -96,9 +96,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Camping ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="NoCheck"></img>
+            <img src={uncheckedIcon} alt="NoCheck"></img>
           )}
           Camping
         </button>
@@ -111,9 +111,9 @@ const SearchFilterBox = () => {
           className="Button"
         >
           {Motorhome ? (
-            <img src={checked} alt="Check"></img>
+            <img src={checkedIcon} alt="Check"></img>
           ) : (
-            <img src={unckecked} alt="NoCheck"></img>
+            <img src={uncheckedIcon} alt="NoCheck"></img>
           )}
           Motorhome
         </button>

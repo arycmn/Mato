@@ -4,22 +4,24 @@ const Picture = ({
   filter,
   alt,
   src,
-  pictureType,
+  picturetype,
   height,
   width,
   filterColor,
   filterOpacity,
   pictureText,
   textWeight,
+  onClick,
 }) => {
   return (
     <Container>
       <img
         src={src}
         alt={alt}
-        pictureType={pictureType}
+        picturetype={picturetype}
         height={height}
         width={width}
+        onClick={onClick}
       />
       {filter && (
         <Filter
