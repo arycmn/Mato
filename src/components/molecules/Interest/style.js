@@ -75,25 +75,25 @@ export const Title = styled.div`
 `;
 
 export const Button = styled.button`
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90px;
-  height: 70px;
+  width: 110px;
+  height: 90px;
   font-size: 18px;
-  border: none;
+  border: ${({selected}) => selected ? "4px solid rgb(58, 97, 62, 0.7)" : "none"};
   opacity: 85%;
   border-radius: 15px;
   margin: 0 10px;
   color: #3a613e;
   outline: none;
   padding: 10px;
-  box-sizing: content-box;
+  box-sizing: border-box;
   cursor: pointer;
 
   @media (min-width: 640px) {
     width: 180px;
-    border: ${({ type }) => (type === "icon" ? "none" : "1px solid #f5f5f5")};
   }
 `;
