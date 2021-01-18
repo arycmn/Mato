@@ -1,40 +1,14 @@
-const defaultState = [
-  {
-    name: "Horse",
-    state: false,
-  },
-  {
-    name: "Relaxation",
-    state: false,
-  },
-  {
-    name: "Fishing",
-    state: false,
-  },
-  {
-    name: "Climbing",
-    state: false,
-  },
-  {
-    name: "Exploration",
-    state: false,
-  },
-  {
-    name: "Camping",
-    state: false,
-  },
-  {
-    name: "Motorhome",
-    state: false,
-  },
-];
-
-export const searchPreferencesReducer = (state = defaultState, action) => {
+export const searchPreferencesReducer = (state = [], action) => {
   switch (action.type) {
-    case "@searchPreferences/STORE":
-      const { searchPreferences } = action;
+    case "@searchPreferences/add":
+      const { preference } = action;
 
-      return searchPreferences;
+      return [...state, preference];
+
+    case "@searchPreferences/remove":
+      const { preferenceName } = action;
+
+      return state.filter((preference) => preference !== preferenceName);
 
     default:
       return state;
