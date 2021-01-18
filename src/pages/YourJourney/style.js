@@ -5,9 +5,115 @@ export const Container = styled.div`
   flex-flow: column nowrap;
   align-items: center;
   > div:nth-child(2) {
-    @media (max-width: 800px) {
-      width: auto;
-      padding-left: 150px;
+    width: 97vw;
+    margin-right: 0;
+    background-color: transparent;
+
+    > div:nth-child(2) {
+      width: 90vw;
+      > div {
+        display: flex;
+        align-items: center;
+        height: auto;
+        width: 80vw;
+        /*Imagem */
+        > div:nth-child(1) {
+          margin-left: 15vw;
+        }
+        /*Name */
+        > div:nth-child(2) {
+          margin-top: 0;
+        }
+        /*Button */
+        > div:nth-child(3) {
+          margin-left: -120px;
+        }
+      }
+    }
+  }
+  @media (max-width: 540px) {
+    > div:nth-child(2) {
+      width: 90vw;
+      margin-right: 0;
+      background-color: transparent;
+
+      > div:nth-child(2) {
+        width: 90vw;
+        > div {
+          display: flex;
+          align-items: center;
+          height: auto;
+          width: 80vw;
+          margin-left: 15px;
+          /*Imagem */
+          > div:nth-child(1) {
+            margin-left: -3vw;
+            > img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+          /*Name */
+          > div:nth-child(2) {
+            margin-top: 0;
+            margin-left: 50px;
+            font-size: 20px;
+          }
+          /*Button */
+          > div:nth-child(4) {
+            margin-left: 20px;
+            > button {
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    > div:nth-child(2) {
+      > div:nth-child(2) {
+        > div {
+          /*Name */
+          > div:nth-child(2) {
+            margin-left: 25px;
+          }
+          /*Button */
+          > div:nth-child(4) {
+            > button {
+              width: 100px;
+              margin-left: 140px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 280px) {
+    > div:nth-child(2) {
+      > div:nth-child(2) {
+        > div {
+          /*Imagem */
+          > div:nth-child(1) {
+            > img {
+              margin-left: -5vw;
+            }
+          }
+          /*Name */
+          > div:nth-child(2) {
+            margin-left: 5px;
+          }
+          /*Button */
+          > div:nth-child(4) {
+            > button {
+              width: 90px;
+              font-size: 16px;
+              margin-left: 105px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
     }
   }
 `;
