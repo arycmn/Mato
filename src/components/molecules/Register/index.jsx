@@ -13,6 +13,8 @@ import {
 } from "../../../utils/icons";
 
 const Register = (props) => {
+  
+
   const schema = yup.object().shape({
     user: yup
       .string()
@@ -41,6 +43,7 @@ const Register = (props) => {
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
+
 
   return (
     <Container>
@@ -88,7 +91,7 @@ const Register = (props) => {
           <Par>{errors.passwordConfirm?.message}</Par>
         </div>
         <ButtonContainer>
-          <Button type="submit" round={12}>
+          <Button type="submit" round={12} >
             Enviar
           </Button>
         </ButtonContainer>

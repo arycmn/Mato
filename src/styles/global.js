@@ -23,6 +23,6 @@ export default createGlobalStyle`
     z-index:-1;
     background: rgba(36, 57, 40, 0.42);
     width: 100%;
-    height: 1000vh;
+    height: 100vh;
   }
 `;
