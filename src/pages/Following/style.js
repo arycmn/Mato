@@ -17,11 +17,11 @@ export const Container = styled.div`
     > div:nth-child(1) {
       padding: 10px;
     }
+    /*container de listagem*/
     > div:nth-child(2) {
       width: 40vw;
       display: flex;
       flex-flow: column;
-      /* justify-content: center; */
       align-items: center;
       > div {
         justify-content: space-evenly;
