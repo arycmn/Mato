@@ -57,7 +57,6 @@ const Location = () => {
           Continue
         </Button>
       </MainContent>
-      <FooterMenu />
     </Container>
   );
 };
