@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import Button from "../../atoms/Button";
 import TextField from "../../atoms/TextField";
-import { password, profile } from "../../../icons";
+import { password, profile } from "../../../utils/icons";
 
 const Login = (props) => {
   const history = useHistory();
