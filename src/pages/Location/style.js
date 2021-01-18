@@ -1,36 +1,31 @@
 import styled from "styled-components";
 
 export const Title = styled.div`
-  width: 100vw;
-  height: 10vh;
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   font-size: 32px;
   font-family: "Poppins", sans-serif;
   color: #f5f5f5;
-  margin: 0 0 0 25px;
 
-  > div {
-    height: auto;
-    width: auto;
+  div img {
+    width: 32px;
+    height: 32px;
   }
-  > div img {
-    width: 30px;
-    height: 30px;
-    margin-right: 52px;
-  }
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
+
 export const LocalActivies = styled.div`
-  padding-top: 25px;
+  padding-top: 15px;
   font-family: "Poppins", sans-serif;
 `;
+
 export const Container = styled.div`
-  position: absolute;
-  left: -2px;
+  width: 100%;
 `;
+
 export const LearnMoreText = styled.div`
   display: flex;
   flex-flow: column;
@@ -38,4 +33,8 @@ export const LearnMoreText = styled.div`
   font-family: "Poppins", sans-serif;
   width: 80vw;
   word-break: break-word;
+
+  div:nth-child(2) {
+    text-decoration: underline;
+  }
 `;

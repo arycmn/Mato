@@ -8,7 +8,7 @@ const FriendCard = ({ imgUrl, name }) => {
       <Picture
         width="72px"
         height="72px"
-        pictureType="profile"
+        picturetype="profile"
         src={imgUrl}
       ></Picture>
       <Name>{name}</Name>
