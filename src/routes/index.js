@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import YourJourney from "../pages/YourJourney";
 
 import Following from "../pages/Following";
 import Search from "../pages/Search";
