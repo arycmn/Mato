@@ -1,7 +1,12 @@
-import { Input } from "./style";
+import { Container, Label, Input } from "./style";
 
-const Calendar = () => {
-  return <Input />;
+const Calendar = ({ label }) => {
+  return (
+    <Container>
+      <Label>{label}</Label>
+      <Input name="reservation" type="date" />
+    </Container>
+  );
 };
 
 export default Calendar;

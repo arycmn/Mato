@@ -1,5 +1,13 @@
+import GlobalStyle from "./styles/global";
+import Routes from "./routes";
+
 function App() {
-  return <div>Hello world!!!</div>;
+  return (
+    <div id="bg-filter">
+      <GlobalStyle />
+      <Routes />
+    </div>
+  );
 }
 
 export default App;
