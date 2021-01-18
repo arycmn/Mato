@@ -56,7 +56,7 @@ const YourJourney = () => {
 
   return (
     <Container>
-      <Title>Choose Your Journey</Title>
+      <Title text={"Choose Your Journey"}></Title>
       <MainContent>
         <SelectorContainer>
           <ViewOptions></ViewOptions>
