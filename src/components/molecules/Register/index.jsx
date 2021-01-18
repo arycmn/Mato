@@ -10,7 +10,7 @@ import {
   password,
   profile,
   confirmPassword,
-} from "../../../icons";
+} from "../../../utils/icons";
 
 const Register = (props) => {
   const schema = yup.object().shape({

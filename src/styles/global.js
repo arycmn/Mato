@@ -1,7 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 import Background from "../images/Background.webp";
+import NatureSpiritRough from "../natureSpiritFont/NatureSpiritRough.otf";
 
 export default createGlobalStyle`
+  @font-face {
+        font-family: "Native Spirit";
+        src: url(${NatureSpiritRough});
+      }
   body {
     background-image: url(${Background});
     background-size: cover;
