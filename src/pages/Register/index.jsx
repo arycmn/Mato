@@ -1,4 +1,4 @@
-import Register from "../Register";
+import Register from "../../components/molecules/Register";
 import Title from "../../components/atoms/Title";
 import { Header } from "./style";
 
