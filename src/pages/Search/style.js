@@ -35,5 +35,35 @@ export const LocationList = styled.div`
   img {
     border-radius: 10px;
     margin: 8px;
+
+    @media (max-width: 280px) {
+      width: 90px;
+      height: 90px;
+    }
+
+    @media (min-width: 320px) {
+      width: 105px;
+      height: 105px;
+    }
+
+    @media (width: 360px) {
+      width: 125px;
+      height: 125px;
+    }
+
+    @media (width: 375px) {
+      width: 130px;
+      height: 130px;
+    }
+
+    @media (min-width: 411px) {
+      width: 145px;
+      height: 145px;
+    }
+
+    @media (width: 540px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 `;
