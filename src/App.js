@@ -9,14 +9,18 @@ import {
   getUserByIdThunk,
   register,
   login } from './store/modules/members/thunk'
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
-
+  const dispatch = useDispatch()
   const myStore = useSelector(store => store)
 
   const func = () => {
-     getUserListThunk()
+    dispatch(getUserListThunk())
+    login({
+      email: "test1@test.com",
+      password:"asdqwe"
+    })
     console.log(myStore)
 
   }
@@ -32,12 +36,11 @@ function App() {
   
   getUserByIdThunk('1')
   
-  register()
-  
-  login({
-    email: "test1@test.com",
-    password:"$2a$10$ui6IwyEs59hhWFvVzQBAde5tl3p/r4ZRJp.r8Z1FpqHysLjVwGLfW"
+  register({
+
   })
+  
+
 
   console.log('test')
   return (

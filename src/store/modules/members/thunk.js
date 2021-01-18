@@ -7,7 +7,7 @@ export const getUserListThunk = () => async (dispatch) => {
   console.log('testing..')
   
   try {
-    const response = await API.get(`https://kenziehub.me/users`)
+    const response = await API.get(`/users`)
     users = [...response.data]
     dispatch(storeMember(users))
     console.log(users)
@@ -102,17 +102,25 @@ export const getPostsThunk = () => async (dispatch) => {
   }
 
   export const register = (registerInfo) => async (dispatch) => {
-    
+    const { 
+      email, 
+      password,
+      firstname,
+      lastname,
+      followers_id,
+      following_id,
+      activities_id,
+      image_url } = registerInfo
     try {
       const response = await API.post(`/users`,{
-        "email": registerInfo.email || '',
-        "password": registerInfo.password || '',
-        "firstname": registerInfo.firstname || '',
-        "lastname": registerInfo.lastname || '',
-        "followers_id": registerInfo.followers_id || [],
-        "following_id": registerInfo.following_id || [],
-        "activities_id": registerInfo.activities_id || [],
-        "image_url": registerInfo.image_url || '' 
+        "email": email || '',
+        "password": password || '',
+        "firstname": firstname || '',
+        "lastname": lastname || '',
+        "followers_id": followers_id || [],
+        "following_id": following_id || [],
+        "activities_id": activities_id || [],
+        "image_url": image_url || '' 
     
       })
 
@@ -124,12 +132,17 @@ export const getPostsThunk = () => async (dispatch) => {
 
   export const login = async (loginInfo) =>  {
     
+    const {email, password,id} = loginInfo
+
     try {
       const response = await API.post(`/signin`,{
-        email:loginInfo.email,
-        password:loginInfo.password
+        email:email,
+        password:password,
+        id:id
       })
-      console.log(response)
+      const { accessToken } = response.data
+      localStorage.setItem('AuthorizationToken', accessToken)
+    
     } catch (err) {
       console.log(err)
     }
