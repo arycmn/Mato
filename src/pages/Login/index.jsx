@@ -1,4 +1,4 @@
-import Login from "../Login";
+import Login from "../../components/molecules/Login";
 import Title from "../../components/atoms/Title";
 import { Header } from "./style";
 
