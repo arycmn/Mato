@@ -26,66 +26,6 @@ const Following = () => {
       name: "Silvio",
       image_url: "https://picsum.photos/200",
     },
-    {
-      name: "Jorge",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Marcos",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvia",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Mario",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Jorge",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Marcos",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvia",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Mario",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Jorge",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Marcos",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvia",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Mario",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "AAAA",
-      image_url: "https://picsum.photos/200",
-    },
   ];
   const name = "Lino";
   return (
