@@ -5,13 +5,36 @@ export const Container = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  > div:nth-child(2) .Link {
+    cursor: pointer;
+    :hover {
+      text-decoration: underline;
+    }
+  }
   /*MainContent */
   > div:nth-child(2) {
     /*background-color: transparent;*/
+    margin: 0;
+    width: 90vw;
 
+    @media (max-width: 280px) {
+      width: 85vw;
+    }
+    @media (min-width: 540px) {
+      width: 93vw;
+    }
+    @media (min-width: 768px) {
+      width: 95vw;
+    }
+    @media (min-width: 1280px) {
+      width: 96.8vw;
+      height: 86.8vh;
+    }
     > div {
       display: flex;
-      justify-content: center;
+      @media (max-width: 540px) {
+        justify-content: center;
+      }
       align-items: center;
     }
 
@@ -47,9 +70,11 @@ export const Container = styled.div`
       display: flex;
       justify-content: flex-start;
     }
-    > div img {
-      height: 56px;
-      height: 56px;
+    > div:nth-child(2) {
+      > img {
+        height: 56px;
+        height: 56px;
+      }
     }
   }
 `;
@@ -67,5 +92,68 @@ export const Recomended = styled.div`
     width: 90vw;
 
     padding: 10px 0;
+  }
+`;
+export const ImagemContainer = styled.div`
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  > div {
+    justify-content: flex-start;
+    @media (min-width: 280px) {
+      padding-bottom: 35px;
+    }
+  }
+  > div div {
+    color: white;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 20px;
+
+    width: 170px;
+    margin-top: -75px;
+    @media (min-width: 280px) {
+      justify-content: center;
+
+      font-size: 15px;
+
+      width: 115px;
+      margin-top: -55px;
+    }
+    @media (min-width: 360px) {
+      justify-content: center;
+
+      font-size: 20px;
+
+      width: 160px;
+      margin-top: -65px;
+    }
+    @media (min-width: 411px) {
+      justify-content: center;
+
+      font-size: 22px;
+
+      width: 180px;
+      margin-top: -75px;
+    }
+  }
+  > div img {
+    @media (min-width: 280px) {
+      width: 105px;
+      height: 105px;
+      padding: 5px;
+    }
+    @media (min-width: 360px) {
+      width: 150px;
+      height: 150px;
+      padding: 5px;
+    }
+    @media (min-width: 411px) {
+      width: 170px;
+      height: 170px;
+      padding: 5px;
+    }
   }
 `;
