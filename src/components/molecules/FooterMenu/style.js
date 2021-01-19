@@ -19,10 +19,6 @@ export const Container = styled.div`
   }
 
   @media (min-width: 640px) {
-    top: 0;
-    position: static;
-    max-width: 100vw;
-    margin: auto;
-    padding: ;
+    display: none;
   }
 `;
