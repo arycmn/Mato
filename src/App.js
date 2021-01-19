@@ -2,6 +2,7 @@ import GlobalStyle from "./styles/global";
 import Routes from "./routes";
 import FooterMenu from "./components/molecules/FooterMenu";
 import { useHistory } from "react-router-dom";
+
 function App() {
   const history = useHistory();
   console.log(history);

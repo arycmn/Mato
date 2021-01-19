@@ -1,4 +1,4 @@
-export const storeMemberList = (memberList) => ({
+export const storeMember = (membersList) => ({
     type:'@members/STORE',
-    memberList,
+    membersList,
 })
