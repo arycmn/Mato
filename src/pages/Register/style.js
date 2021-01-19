@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
-  border-radius: 10px;
   padding: 10px;
+  border-radius: 10px;
   border: 50px;
-
   color: white;
-  > div:nth-child(2) {
-    padding-top: 15px;
-  }
   > img {
     padding-top: 15px;
     padding-bottom: 0px;

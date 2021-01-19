@@ -4,11 +4,12 @@ import { Container } from './style'
 const LocationList = ({data}) => {
     return(
         <Container>
-        {data.map(({name,description,pictureSrc}) => 
+        {data.map(({name,description,pictureSrc} , index) => 
             <LocationCard
-            src={pictureSrc}
-            locationName={name}
-            locationDescription={description}
+                key={index}
+                src={pictureSrc}
+                locationName={name}
+                locationDescription={description}
             />
         )}
         </Container>

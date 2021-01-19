@@ -1,4 +1,4 @@
-import { Container, Name, ButtonContainer } from "./style";
+import { Container, Name } from "./style";
 import Button from "../../atoms/Button";
 import Picture from "../../atoms/Picture";
 
@@ -8,7 +8,7 @@ const FriendCard = ({ imgUrl, name }) => {
       <Picture
         width="72px"
         height="72px"
-        pictureType="profile"
+        picturetype="profile"
         src={imgUrl}
       ></Picture>
       <Name>{name}</Name>

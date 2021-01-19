@@ -1,48 +1,25 @@
-import YourJourney from "./pages/YourJourney";
 import GlobalStyle from "./styles/global";
-import {
-  getUserListThunk,
-  getCampsiteByCampsiteId,
-  getCampsites,
-  getPostsByUserIdThunk, 
-  getPostsThunk,
-  getUserByIdThunk,
-  register,
-  login } from './store/modules/members/thunk'
-import { useSelector, useDispatch } from "react-redux";
+import Routes from "./routes";
+import FooterMenu from "./components/molecules/FooterMenu";
+import { useHistory } from "react-router-dom";
 
 function App() {
-  const dispatch = useDispatch()
-  const myStore = useSelector(store => store)
-
-  const func = () => {
-    dispatch(getUserListThunk())
-    dispatch(getCampsiteByCampsiteId('1'))
-    dispatch(getCampsites())
-    dispatch(getPostsByUserIdThunk('1') )
-    dispatch(getPostsThunk())
-    dispatch(getUserByIdThunk('1'))
-
-    login({
-      email: "test1@test.com",
-      password:"asdqwe"
-    })
-    console.log(myStore)
-
-  }
-  
-  register({
-
-  })
-  
-
-
-  console.log('test')
+  const history = useHistory();
+  console.log(history);
   return (
-    <div>
-      <GlobalStyle />
-      <button onClick={() => func() }>asd</button>
+    <>
+    <div id="bg-filter">
     </div>
+      <GlobalStyle />
+      <Routes />
+      {history.location.pathname === "/login" ||
+      history.location.pathname === "/register" ||
+      history.location.pathname === "/home" ? (
+        <></>
+      ) : (
+        <FooterMenu />
+      )}
+    </>
   );
 }
 

@@ -1,12 +1,18 @@
-export const searchPreferencesReducer = (state = [], action) =>{
-    switch (action.type) {
-        case '@searchPreferences/STORE':
-            const  { searchPreferences } = action
-            return searchPreferences
+export const searchPreferencesReducer = (state = [], action) => {
+  switch (action.type) {
+    case "@searchPreferences/add":
+      const { preference } = action;
 
-        default:
-            return state
-    }
-}
+      return [...state, preference];
 
-export default searchPreferencesReducer
+    case "@searchPreferences/remove":
+      const { preferenceName } = action;
+
+      return state.filter((preference) => preference !== preferenceName);
+
+    default:
+      return state;
+  }
+};
+
+export default searchPreferencesReducer;

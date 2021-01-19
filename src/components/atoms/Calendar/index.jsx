@@ -1,9 +1,9 @@
 import { Container, Label, Input } from "./style";
 
-const Calendar = () => {
+const Calendar = ({ label }) => {
   return (
     <Container>
-      <Label>Reserve este local</Label>
+      <Label>{label}</Label>
       <Input name="reservation" type="date" />
     </Container>
   );
