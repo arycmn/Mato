@@ -17,6 +17,12 @@ function App() {
 
   const func = () => {
     dispatch(getUserListThunk())
+    dispatch(getCampsiteByCampsiteId('1'))
+    dispatch(getCampsites())
+    dispatch(getPostsByUserIdThunk('1') )
+    dispatch(getPostsThunk())
+    dispatch(getUserByIdThunk('1'))
+
     login({
       email: "test1@test.com",
       password:"asdqwe"
@@ -24,17 +30,6 @@ function App() {
     console.log(myStore)
 
   }
-
-  
-  getCampsiteByCampsiteId('1')
-  
-  getCampsites()
-  
-  getPostsByUserIdThunk('1') 
-  
-  getPostsThunk()
-  
-  getUserByIdThunk('1')
   
   register({
 

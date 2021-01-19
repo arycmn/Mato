@@ -42,7 +42,7 @@ export const getPostsThunk = () => async (dispatch) => {
       console.log(fetchedPosts)
 
       //dispatch to posts store
-      //dispatch((fetchedUser))
+      dispatch(storeMember(fetchedPosts))
     } catch (err) {
       console.log(err)
 
@@ -59,7 +59,7 @@ export const getPostsThunk = () => async (dispatch) => {
       fetchedPosts = response.data
       console.log(fetchedPosts)
       //dispatch to posts store
-      //dispatch((fetchedPosts))
+      dispatch(storeMember(fetchedPosts))
 
     } catch (err) {
       console.log(err)
@@ -76,7 +76,7 @@ export const getPostsThunk = () => async (dispatch) => {
       fetchedCamps = response.data
       console.log(fetchedCamps)
       //dispatch to camps store
-      //dispatch((fetchedCamps))
+      dispatch(storeMember(fetchedCamps))
 
     } catch (err) {
       console.log(err)
@@ -93,7 +93,7 @@ export const getPostsThunk = () => async (dispatch) => {
       fetchedCamp = response.data
       console.log(fetchedCamp)
       //dispatch to camps store
-      //dispatch((fetchedCamp))
+      dispatch(storeMember(fetchedCamp))
 
     } catch (err) {
       console.log(err)
