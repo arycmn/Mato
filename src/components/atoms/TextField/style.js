@@ -24,6 +24,9 @@ export const Container = styled.div`
     color: #f5f5f5;
     font-weight: bold;
     padding: 0 8px;
+    @media (min-width: 760px) {
+      font-size: 25px;
+    }
   }
   img {
     max-width: 24px;

@@ -3,6 +3,8 @@ import Button from "../../atoms/Button";
 import Picture from "../../atoms/Picture";
 
 const FriendCard = ({ imgUrl, name }) => {
+  const screenWidth = window.innerWidth;
+
   return (
     <Container>
       <Picture
@@ -12,7 +14,7 @@ const FriendCard = ({ imgUrl, name }) => {
         src={imgUrl}
       ></Picture>
       <Name>{name}</Name>
-      <Button width="92px" height="32px">
+      <Button width="32px" height="32px" round={screenWidth > 760}>
         Unfollow
       </Button>
     </Container>

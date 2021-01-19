@@ -4,7 +4,12 @@ export const Header = styled.div`
   border-radius: 10px;
   padding: 10px;
   border: 50px;
-
+  @media (min-width: 760px) {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+  }
   color: white;
   > div:nth-child(2) {
     padding-top: 15px;
@@ -31,16 +36,11 @@ export const Header = styled.div`
       padding-left: 25vh;
     }
     @media (min-width: 760px) {
-      padding-left: 26vh;
+      padding-left: 25vh;
       padding-top: 10vw;
       padding-bottom: 10vw;
-      width: 200px;
-      height: 200px;
-    }
-    @media (min-width: 1280px) {
-      padding-left: 57vh;
-      padding-top: 10vw;
-      padding-bottom: 3vw;
-    }
+      width: 400px;
+      height: 400px;
+    
   }
 `;

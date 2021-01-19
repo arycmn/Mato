@@ -5,11 +5,10 @@ import { useHistory } from "react-router-dom";
 
 function App() {
   const history = useHistory();
-  console.log(history);
+
   return (
     <>
-    <div id="bg-filter">
-    </div>
+      <div id="bg-filter"></div>
       <GlobalStyle />
       <Routes />
       {history.location.pathname === "/login" ||

@@ -8,14 +8,14 @@ export const Container = styled.div`
   margin: 30px;
   padding: 20px;
   @media (min-width: 760px) {
-    width: 75vw;
-    margin-left: 7vw;
-    padding-right: 6vw;
-  }
-  @media (min-width: 1280px) {
-    width: 78vw;
+    box-sizing: content-box;
+    width: 38vw;
+
     > form div {
+      padding: 10px;
       height: 6vh;
+      width: 100%;
+      margin: 10px;
     }
     > form div button {
       height: 5vh;
@@ -26,8 +26,7 @@ export const Container = styled.div`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin: auto;
-  width: 220px;
+  /* width: 220px; */
   @media (min-width: 280px) {
     width: 150px;
   }
