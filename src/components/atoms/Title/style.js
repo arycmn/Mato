@@ -6,4 +6,12 @@ export const Container = styled.div`
   padding-top: 50px;
   position: static;
   text-align: center;
+
+  @media (min-width: 760px) {
+    position: fixed;
+    top: 25px;
+    text-align: center;
+    width: 100%;
+    font-size: 70px;
+  }
 `;

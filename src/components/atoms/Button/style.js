@@ -16,8 +16,9 @@ export const Container = styled.button`
   cursor: pointer;
 
   @media (min-width: 640px) {
-    width: 180px;
+    width: 200px;
     background: transparent;
     border: ${({ type }) => (type === "icon" ? "none" : "1px solid #f5f5f5")};
+    margin: 15px;
   }
 `;

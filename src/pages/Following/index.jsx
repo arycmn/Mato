@@ -2,6 +2,7 @@ import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
 import MainContent from "../../components/templates/MainContent";
 import FooterMenu from "../../components/molecules/FooterMenu";
+import Title from "../../components/atoms/Title";
 
 const Following = () => {
   const data = [
@@ -26,12 +27,12 @@ const Following = () => {
       image_url: "https://picsum.photos/200",
     },
   ];
-
+  const name = "Lino";
   return (
     <Container>
-      <h1>Welcome $name</h1>
+      <Title text={`Welcome ${name}`}></Title>
       <MainContent>
-        <h2>Following</h2>
+        <Title text={"Following"}></Title>
         <FollowingList data={data} />
       </MainContent>
       <FooterMenu />

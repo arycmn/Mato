@@ -34,6 +34,7 @@ const Register = (props) => {
       .required("Campo obrigatório"),
     passwordConfirm: yup
       .string()
+      .required("Campo obrigatório")
       .oneOf([yup.ref("password")], "As senhas diferem"),
   });
 

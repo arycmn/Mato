@@ -5,11 +5,10 @@ export const Container = styled.div`
   bottom: 0;
   background: #fff;
   width: 100%;
-  padding: 8px;
-
+  padding: 12px;
   display: flex;
   justify-content: space-around;
-
+  box-sizing: border-box;
   img {
     cursor: pointer;
     width: 7%;
@@ -17,5 +16,13 @@ export const Container = styled.div`
     @media (min-width: 640px) {
       max-width: 30px;
     }
+  }
+
+  @media (min-width: 640px) {
+    top: 0;
+    position: static;
+    max-width: 100vw;
+    margin: auto;
+    padding: ;
   }
 `;

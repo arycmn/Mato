@@ -11,6 +11,7 @@ import {
 } from "./style";
 import Calendar from "../../components/atoms/Calendar";
 import { useState } from "react";
+import FooterMenu from "../../components/molecules/FooterMenu";
 const Reservation = () => {
   const [StateActive, setActive] = useState(0);
   const obj = {
@@ -31,51 +32,49 @@ const Reservation = () => {
     pictureSrc: "https://picsum.photos/200",
   };
   return (
-    <div>
+    <Container>
       <Title>
         Location <FavoriteIcon />
       </Title>
-      <Container>
-        <MainContent>
-          <Picture
-            alt={"Location Picture"}
-            src={obj.pictureSrc}
-            pictureType={"location"}
-            height={"220px"}
-            width={"300px"}
-          ></Picture>
-          <LearnMoreText>How long do you intend to stay?</LearnMoreText>
-          <BarDays>
-            <div
-              onClick={() => setActive(0)}
-              className={StateActive === 0 ? "active" : ""}
-            >
-              1 - 2 days
-            </div>
-            <div
-              onClick={() => setActive(1)}
-              className={StateActive === 1 ? "active" : ""}
-            >
-              3 - 5 days
-            </div>
-            <div
-              onClick={() => setActive(2)}
-              className={StateActive === 2 ? "active" : ""}
-            >
-              6 - 10 days
-            </div>
-          </BarDays>
-          <CalendarContainer>
-            <Calendar label="Data de InÍcio"></Calendar>
-            <Calendar label="Data Final"></Calendar>
-          </CalendarContainer>
+      <MainContent>
+        <Picture
+          alt={"Location Picture"}
+          src={obj.pictureSrc}
+          pictureType={"location"}
+          height={"220px"}
+          width={"300px"}
+        ></Picture>
+        <LearnMoreText>How long do you intend to stay?</LearnMoreText>
+        <BarDays>
+          <div
+            onClick={() => setActive(0)}
+            className={StateActive === 0 ? "active" : ""}
+          >
+            1 - 2 days
+          </div>
+          <div
+            onClick={() => setActive(1)}
+            className={StateActive === 1 ? "active" : ""}
+          >
+            3 - 5 days
+          </div>
+          <div
+            onClick={() => setActive(2)}
+            className={StateActive === 2 ? "active" : ""}
+          >
+            6 - 10 days
+          </div>
+        </BarDays>
+        <CalendarContainer>
+          <Calendar label="Data de InÍcio"></Calendar>
+          <Calendar label="Data Final"></Calendar>
+        </CalendarContainer>
 
-          <Button width={"267px"} height={"52px"} round>
-            Continue
-          </Button>
-        </MainContent>
-      </Container>
-    </div>
+        <Button width={"267px"} height={"52px"} round>
+          Continue
+        </Button>
+      </MainContent>
+    </Container>
   );
 };
 export default Reservation;
