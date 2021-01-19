@@ -1,4 +1,4 @@
-import { Container, Par, ButtonContainer } from "./style";
+import { Container, Par, ButtonContainer,Login } from "./style";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -12,7 +12,12 @@ import {
   confirmPassword,
 } from "../../../utils/icons";
 
+import { useHistory } from 'react-router-dom'
+
+
 const Register = (props) => {
+  const history = useHistory()
+  
   const schema = yup.object().shape({
     user: yup
       .string()
@@ -91,6 +96,8 @@ const Register = (props) => {
             Enviar
           </Button>
         </ButtonContainer>
+        <Login onClick={() => history.push('/login')}>Login</Login>
+
       </form>
     </Container>
   );
