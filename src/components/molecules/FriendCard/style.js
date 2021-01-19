@@ -13,5 +13,5 @@ export const Container = styled.div`
 `;
 
 export const Name = styled.div`
-  font-size:22px;
+  font-size: 22px;
 `;

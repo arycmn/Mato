@@ -60,7 +60,7 @@ export const BarDays = styled.div`
 
     border-radius: 10px;
 
-    width: 80px;
+    width: 100px;
     height: 60%;
 
     background-color: #2c482f;

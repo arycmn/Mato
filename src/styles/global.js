@@ -14,14 +14,18 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
-    z-index: -1;
+    z-index: -2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-attachment: fixed;
   }
 
   div#bg-filter {
+    position:fixed;
+    top:0;
+    z-index:-1;
     background: rgba(36, 57, 40, 0.42);
     width: 100%;
     height: 100vh;
