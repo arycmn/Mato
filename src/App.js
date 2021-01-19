@@ -16,8 +16,7 @@ function App() {
       history.location.pathname === "/home" ? (
         <></>
       ) : (
-        <></>
-        // <FooterMenu />
+        <FooterMenu />
       )}
     </>
   );
