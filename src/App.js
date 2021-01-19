@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 function App() {
   const history = useHistory();
-  console.log(history);
+
   return (
     <>
       <div id="bg-filter"></div>
@@ -16,7 +16,8 @@ function App() {
       history.location.pathname === "/home" ? (
         <></>
       ) : (
-        <FooterMenu />
+        <></>
+        // <FooterMenu />
       )}
     </>
   );
