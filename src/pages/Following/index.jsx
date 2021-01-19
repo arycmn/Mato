@@ -1,10 +1,11 @@
 import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
 import MainContent from "../../components/templates/MainContent";
-import FooterMenu from "../../components/molecules/FooterMenu";
 import Title from "../../components/atoms/Title";
 
 const Following = () => {
+  const width = window.innerWidth;
+
   const data = [
     {
       name: "Jorge",
@@ -26,16 +27,37 @@ const Following = () => {
       name: "Silvio",
       image_url: "https://picsum.photos/200",
     },
+    {
+      name: "Silvio",
+      image_url: "https://picsum.photos/200",
+    },
+    {
+      name: "Silvio",
+      image_url: "https://picsum.photos/200",
+    },
+    {
+      name: "Silvio",
+      image_url: "https://picsum.photos/200",
+    },
+    {
+      name: "Silvio",
+      image_url: "https://picsum.photos/200",
+    },
+    {
+      name: "Silvio",
+      image_url: "https://picsum.photos/200",
+    },
+    {
+      name: "Silvio",
+      image_url: "https://picsum.photos/200",
+    },
   ];
-  const name = "Lino";
+
   return (
     <Container>
-      <Title text={`Welcome ${name}`}></Title>
-      <MainContent>
-        <Title text={"Following"}></Title>
+      <MainContent title="Following">
         <FollowingList data={data} />
       </MainContent>
-      <FooterMenu />
     </Container>
   );
 };

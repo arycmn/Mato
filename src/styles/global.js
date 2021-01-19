@@ -8,8 +8,6 @@ export default createGlobalStyle`
         src: url(${NatureSpiritRough});
       }
 
-
-
   body {
     background-image: url(${Background});
     background-size: cover;
@@ -28,7 +26,8 @@ export default createGlobalStyle`
     position:fixed;
     top:0;
     z-index:-1;
-    background: rgba(36, 57, 40, 0.42);
+    background: #0E1D0E;
+    opacity: 0.6;
     width: 100%;
     height: 100vh;
   }
