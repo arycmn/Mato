@@ -1,7 +1,14 @@
 import { Container } from "./style";
 
-const MainContent = ({ children }) => {
-  return <Container>{children}</Container>;
+import Title from "../../atoms/Title";
+
+const MainContent = ({ children, title }) => {
+  return (
+    <>
+      <Title text={title} />
+      <Container>{children}</Container>
+    </>
+  );
 };
 
 export default MainContent;
