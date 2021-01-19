@@ -6,8 +6,8 @@ import logo from "../../images/logo Mato.png";
 const RegisterPage = () => {
   return (
     <Header>
-      <img src={logo} alt={'logo'}></img>
-      <Title text={"Cadastre - se"} />      
+      <img src={logo} alt={"logo"}></img>
+      <Title text={"Cadastre - se"} />
       <Register />;
     </Header>
   );
