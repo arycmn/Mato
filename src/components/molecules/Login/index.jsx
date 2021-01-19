@@ -1,4 +1,4 @@
-import { Container, ButtonContainer } from "./style";
+import { Container, ButtonContainer, Register } from "./style";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import Button from "../../atoms/Button";
@@ -34,6 +34,7 @@ const Login = (props) => {
             onChange={(e) => setValue("password")}
           />
         </div>
+        <Register onClick={() => history.push('/register')}>Cadastrar</Register>
         <ButtonContainer>
           <Button type="submit" round={12}>
             Entrar
