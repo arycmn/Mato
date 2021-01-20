@@ -8,6 +8,14 @@ export const Container = styled.div`
   padding: 20px;
   border-radius: 10px;
   border: 50px;
+
+  @media (min-width: 1280px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const PlacesContainer = styled.div`
@@ -36,6 +44,12 @@ export const PlacesContainer = styled.div`
     height: 200px;
     justify-content: start;
   }
+
+  @media (min-width: 1280px) {
+    width: 70%;
+    height: auto;
+    padding: 2%;
+  }
 `;
 export const ActivityContainer = styled.div`
   display: flex;
@@ -50,15 +64,14 @@ export const ActivityContainer = styled.div`
     width: 400px;
     height: 200px;
     justify-content: start;
-    
   }
 
   @media (min-width: 640px) {
     width: 600px;
     height: 200px;
     justify-content: center;
-    > button{
-      margin-top:10px;
+    > button {
+      margin-top: 10px;
     }
   }
 
@@ -66,6 +79,9 @@ export const ActivityContainer = styled.div`
     width: 667px;
     height: 200px;
     justify-content: start;
+  }
+  @media (min-width: 1280px) {
+    width: 70%;
   }
 `;
 export const Title = styled.div`
@@ -75,7 +91,6 @@ export const Title = styled.div`
 `;
 
 export const Button = styled.button`
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -83,7 +98,8 @@ export const Button = styled.button`
   width: 110px;
   height: 90px;
   font-size: 18px;
-  border: ${({selected}) => selected ? "4px solid rgb(58, 97, 62, 0.7)" : "none"};
+  border: ${({ selected }) =>
+    selected ? "4px solid rgb(58, 97, 62, 0.7)" : "none"};
   opacity: 85%;
   border-radius: 15px;
   margin: 0 10px;
