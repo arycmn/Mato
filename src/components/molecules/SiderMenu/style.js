@@ -11,6 +11,7 @@ export const Container = styled.div`
   flex-direction: column;
   margin: 0px;
   padding: 20px;
+  z-index: 1;
 
   img {
     margin: 30px;
@@ -26,7 +27,7 @@ export const Container = styled.div`
     font-size: 22px;
     font-family: "Poppins", sans-serif;
   }
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `;

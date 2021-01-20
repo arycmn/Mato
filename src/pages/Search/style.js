@@ -1,20 +1,61 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  div:first-child {
-    margin: 0 auto;
+  z-index: -1;
+  @media (min-width: 760px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 400px;
+    display: inline-block;
+  }
+
+  @media (max-width: 760px) {
+    div:first-child {
+      margin: 0 auto;
+    }
   }
 
   button {
     width: 80px;
     margin-left: 15px;
+    border-radius: 10px;
   }
-`;
+  input {
+    border: none;
+    outline: none;
+    background-color: #1f2d1d;
+    opacity: 0.7;
+    border-radius: 31px;
+    width: 60%;
+    color: #f5f5f5;
+    font-weight: bold;
+    padding: 0 8px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    margin: 10px;
+    display: inline-block;
+    @media (min-width: 760px) {
+      width: 700px;
+      font-size: 25px;
+      padding: 0px;
+    }
 
-export const Title = styled.h1`
-  margin: 0 20px;
-  font: 400 2.5rem Poppins, sans-serif;
-  color: #fff;
+    img {
+      max-width: 24px;
+      max-height: 24px;
+      padding: 0px;
+      margin: 0 auto;
+    }
+  }
+
+  button {
+    display: inline-block;
+    width: 80px;
+  }
 `;
 
 export const LocationList = styled.div`

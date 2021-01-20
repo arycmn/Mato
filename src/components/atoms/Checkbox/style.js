@@ -11,6 +11,8 @@ export const Container = styled.button`
   @media (min-width: 640px) {
     width: 180px;
     background: transparent;
-    border:2px solid #3A613E"};
+    border: 2px solid #3a613e;
+    margin: 0px;
+    padding: 0px;
   }
 `;

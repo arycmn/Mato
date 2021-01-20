@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
-import { Container, LocationList, Title } from "./style";
-
+import { Container, LocationList, Input } from "./style";
 import { search } from "../../utils/icons";
-
 import { useSelector } from "react-redux";
-
+import Title from "../../components/atoms/Title";
 import TextField from "../../components/atoms/TextField";
 import Button from "../../components/atoms/Button";
 import SearchFilterBox from "../../components/molecules/SearchFilterBox";
 import Picture from "../../components/atoms/Picture";
-import FooterMenu from "../../components/molecules/FooterMenu";
 
 const locations = [
   {
@@ -206,12 +202,12 @@ const Search = () => {
 
   return (
     <Container>
-      <Title>Pesquisa</Title>
-      <TextField
+      <Title text={"Pesquisa"} />
+      <input
         placeholderText="Pesquisa"
         icon={search}
         type="search"
-        width={90}
+        width={50}
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />
@@ -233,8 +229,6 @@ const Search = () => {
           />
         ))}
       </LocationList>
-
-      <FooterMenu />
     </Container>
   );
 };
