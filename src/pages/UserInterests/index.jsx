@@ -17,7 +17,6 @@ const UserInterests = () => {
 
   return (
     <>
-      <SiderMenu />
       <Header>
         <img src={logo} alt={"logo"}></img>
 
