@@ -15,7 +15,6 @@ import {
 } from "./style";
 
 const YourJourney = () => {
-  // const viewDisplay = useSelector((store) => store.viewDisplayPreferences);
   const [viewList, setViewList] = useState(false);
   const [width, setWidth] = useState(0);
 
@@ -89,19 +88,6 @@ const YourJourney = () => {
             <LocationList data={data} />
           </LocationsContainer>
         )}
-        {/* {viewDisplay.selectedView === "list" && (
-          <LocationList data={data}></LocationList>
-        )}
-        {viewDisplay.selectedView === "map" && (
-          <>
-            <MapComponent />
-            <ButtonContainer>
-              <Button width={"220px"} height={"56px"} round>
-                Choose
-              </Button>
-            </ButtonContainer>
-          </>
-        )} */}
       </MainContent>
     </Container>
   );
