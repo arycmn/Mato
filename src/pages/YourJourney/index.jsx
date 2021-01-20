@@ -1,20 +1,27 @@
-import {
-  Container,
-  SelectorContainer,
-  PageTitle,
-  ButtonContainer,
-} from "./style";
+import { useState, useEffect } from "react";
+
 import LocationList from "../../components/organisms/LocationList";
 import ViewOptions from "../../components/molecules/ViewOptions";
 import MainContent from "../../components/templates/MainContent";
-import FooterMenu from "../../components/molecules/FooterMenu";
-import { useSelector } from "react-redux";
 import MapComponent from "../../components/molecules/Map";
 import Button from "../../components/atoms/Button";
 import Title from "../../components/atoms/Title";
 
+import {
+  Container,
+  SelectorContainer,
+  LocationsContainer,
+  ButtonContainer,
+} from "./style";
+
 const YourJourney = () => {
-  const viewDisplay = useSelector((store) => store.viewDisplayPreferences);
+  // const viewDisplay = useSelector((store) => store.viewDisplayPreferences);
+  const [viewList, setViewList] = useState(false);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [width]);
 
   const data = [
     {
@@ -58,10 +65,31 @@ const YourJourney = () => {
     <Container>
       <Title text={"Choose Your Journey"}></Title>
       <MainContent>
-        <SelectorContainer>
-          <ViewOptions></ViewOptions>
-        </SelectorContainer>
-        {viewDisplay.selectedView === "list" && (
+        {width < 760 ? (
+          <>
+            <SelectorContainer>
+              <ViewOptions viewList={viewList} setViewList={setViewList} />
+            </SelectorContainer>
+            {viewList ? (
+              <LocationList data={data} />
+            ) : (
+              <>
+                <MapComponent />
+                <ButtonContainer>
+                  <Button width={"220px"} height={"56px"} round>
+                    Choose
+                  </Button>
+                </ButtonContainer>
+              </>
+            )}
+          </>
+        ) : (
+          <LocationsContainer>
+            <MapComponent />
+            <LocationList data={data} />
+          </LocationsContainer>
+        )}
+        {/* {viewDisplay.selectedView === "list" && (
           <LocationList data={data}></LocationList>
         )}
         {viewDisplay.selectedView === "map" && (
@@ -73,9 +101,8 @@ const YourJourney = () => {
               </Button>
             </ButtonContainer>
           </>
-        )}
+        )} */}
       </MainContent>
-      <FooterMenu></FooterMenu>
     </Container>
   );
 };
