@@ -10,4 +10,15 @@ export const Container = styled.div`
     width: 80px;
     margin: 10px;
   }
+  @media (min-width: 1200px) {
+    position: absolute;
+
+    right: 80px;
+    top: 150px;
+
+    height: 24vh;
+    width: 25vw;
+
+    margin: 0;
+  }
 `;
