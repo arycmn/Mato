@@ -15,13 +15,14 @@ export const Container = styled.div`
   > div:nth-child(2) {
     /*background-color: transparent;*/
     margin: 0;
-    width: 90vw;
+    width: 100vw;
 
     @media (max-width: 280px) {
-      width: 85vw;
+      width: 100vw;
     }
     @media (min-width: 540px) {
-      width: 93vw;
+      width: 100vw;
+      height: 90vh;
     }
     @media (min-width: 768px) {
       width: 95vw;
