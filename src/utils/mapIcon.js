@@ -5,7 +5,7 @@ import icon from "../assets/mapIcon.svg";
 const mapIcon = Leaflet.icon({
   iconUrl: icon,
 
-  iconSize: [58, 68],
+  iconSize: [38, 38],
   iconAnchor: [29, 68],
   popupAnchor: [0, -60],
 });
