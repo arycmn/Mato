@@ -13,7 +13,6 @@ export const Container = styled.div`
   }
 
   @media (min-width: 1280px) {
-    position: relative;
-    left: 40%;
+    margin-left: 150px;
   }
 `;
