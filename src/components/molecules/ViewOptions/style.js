@@ -15,7 +15,7 @@ export const LeftFilter = styled.div`
   border-radius: 10px 0px 0px 10px;
   display: flex;
   align-items: center;
-  background-color: ${({ viewList }) => (!viewList ? "transparent" : "#999")};
+  background-color: ${({ viewList }) => (!viewList ? "#999" : "transparent")};
   filter: ${({ viewList }) => !viewList && "brightness(0.5)"};
 `;
 
@@ -25,8 +25,7 @@ export const RightFilter = styled.div`
   border-radius: 0px 10px 10px 0px;
   display: flex;
   align-items: center;
-  background-color: ${({ viewList }) => (viewList ? "transparent" : "#999")};
-  /* opacity: ${({ viewList }) => (viewList ? 1 : 0.4)}; */
+  background-color: ${({ viewList }) => (viewList ? "#999" : "transparent")};
   filter: ${({ viewList }) => viewList && "brightness(0.5)"};
 `;
 
