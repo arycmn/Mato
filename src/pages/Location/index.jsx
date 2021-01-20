@@ -32,7 +32,7 @@ const Location = () => {
         <div>Location</div>
         <FavoriteIcon />
       </Title>
-      <MainContent>
+      <MainContent text={null}>
         <Picture
           alt={"Location Picture"}
           src={obj.pictureSrc}

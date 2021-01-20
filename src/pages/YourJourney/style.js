@@ -70,7 +70,7 @@ export const Container = styled.div`
       }
     }
   }
-  @media (max-width: 360px) {
+  @media (max-width: 375px) {
     > div:nth-child(2) {
       > div:nth-child(2) {
         > div {
@@ -116,6 +116,10 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (min-width: 760px) {
+    width: 100%;
+  }
 `;
 
 export const SelectorContainer = styled.div`
@@ -124,15 +128,19 @@ export const SelectorContainer = styled.div`
   margin-bottom: 30px;
 `;
 
-export const PageTitle = styled.div`
-  font-size: 48px;
-  margin-bottom: 30px;
-  color: #f5f5f5;
-`;
-
 export const ButtonContainer = styled.div`
   width: 220px;
   margin: auto;
   margin-bottom: 62px;
   margin-top: 42px;
+`;
+
+export const LocationsContainer = styled.div`
+  width: 100%;
+  min-height: calc(100vh - 300px);
+  margin-top: 5vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
