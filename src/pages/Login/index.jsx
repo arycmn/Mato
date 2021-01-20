@@ -1,6 +1,6 @@
 import Login from "../../components/molecules/Login";
 import Title from "../../components/atoms/Title";
-import { Header, Border, Comment,CommentContent } from "./style";
+import { Header, Border, Comment,CommentContent,TitleContainer } from "./style";
 import logo from "../../images/logo Mato.png";
 import SanCarousel from 'sancarousel';
 import carousel_pic1 from '../../images/carousel_pic1.jpg'
@@ -42,7 +42,7 @@ const LoginPage = () => {
          />
       </Border>
       <img src={logo} alt={'logo'}></img>
-      <Title text={"Login"} />
+      <TitleContainer>{"Login"}</TitleContainer> 
       <Login />
       <Comment>
           <img src={'https://images.pexels.com/photos/5528835/pexels-photo-5528835.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} alt={'profile'}/>

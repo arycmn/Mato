@@ -28,7 +28,7 @@ export const getUserByIdThunk = (userId) => async (dispatch) => {
 }
 
 
-  export const register = async (registerInfo) => {
+  export const registerUser = async (registerInfo) => {
     
     const { 
       email, 

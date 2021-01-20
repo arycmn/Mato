@@ -1,6 +1,6 @@
 import Register from "../../components/molecules/Register";
 import Title from "../../components/atoms/Title";
-import { Header,Border,CommentContent,Comment } from "./style";
+import { Header,Border,CommentContent,Comment,TitleContainer } from "./style";
 import logo from "../../images/logo Mato.png";
 import SanCarousel from 'sancarousel';
 import carousel_pic1 from '../../images/carousel_pic1.jpg'
@@ -33,6 +33,8 @@ const RegisterPage = () => {
   return (
     <Header>
       <img src={logo} alt={"logo"}></img>
+      <TitleContainer>{"Cadastre - se"}</TitleContainer>
+      
       <Border>
         <SanCarousel 
           slides={slides}
@@ -43,9 +45,7 @@ const RegisterPage = () => {
           spaceBetweenSlides="10px"
          />
       </Border>
-      <Title text={"Cadastre - se"} />
       <Register />
-
       <Comment>
           <img src={'https://images.pexels.com/photos/5528835/pexels-photo-5528835.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} alt={'profile'}/>
         <CommentContent>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi repudiandae qui assumenda aspernatur ut tenetur saepe doloribus similique nobis corrupti nostrum, quisquam at commodi minima dicta repellendus voluptates dignissimos aliquid!</CommentContent>
