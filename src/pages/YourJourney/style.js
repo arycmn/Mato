@@ -70,7 +70,7 @@ export const Container = styled.div`
       }
     }
   }
-  @media (max-width: 360px) {
+  @media (max-width: 375px) {
     > div:nth-child(2) {
       > div:nth-child(2) {
         > div {

@@ -19,7 +19,7 @@ export const Title = styled.h1`
 
 export const LocationList = styled.div`
   width: 90%;
-  height: ${({ minimized }) => (minimized ? "35vh" : "70vh")};
+  height: ${({ minimized }) => (minimized ? "35vh" : "78vh")};
   margin: 5px auto 0;
   overflow-y: scroll;
 
