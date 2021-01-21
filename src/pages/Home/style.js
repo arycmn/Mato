@@ -4,6 +4,8 @@ export const Container = styled.div`
   > div:nth-child(1) {
     padding-top: 20px;
     padding-bottom: 20px;
+    position:relative;
+    left:300px;  
   }
   > div:nth-child(2) .Link {
     cursor: pointer;
@@ -30,6 +32,36 @@ export const Container = styled.div`
     @media (min-width: 1280px) {
       width: 96.8vw;
       height: 86.8vh;
+      color: whitesmoke;
+      
+        > div:nth-child(1) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position:relative;
+      left:270px;
+      font-weight:200;  
+      }
+      > div:nth-child(2) {
+      padding-bottom: 20px;
+      position:relative;
+      left:270px;  
+      font-weight:200;
+      }
+      > div:nth-child(3) {
+      font-weight:200;
+      position:relative;
+      left:420px;
+      }
+      > div:nth-child(4) {
+      font-weight:200;
+      position:relative;
+      left:420px;
+      }
+      > div:nth-child(5) {
+      font-weight:200;
+      position:relative;
+      left:148px;
+      }
     }
     > div {
       display: flex;
@@ -77,6 +109,7 @@ export const Container = styled.div`
         height: 56px;
       }
     }
+
   }
 `;
 

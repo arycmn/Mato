@@ -23,33 +23,26 @@ const Reservation = () => {
         <ImagemContainer>
           <div onClick={() => history.push(`/location/1`)}>
             <img
-              alt="Tanda Azul"
-              src="https://cdn.pixabay.com/photo/2014/09/14/21/38/camping-445425_960_720.jpg"
-            ></img>
-            <div>Tenda Azul</div>
-          </div>
-          <div onClick={() => history.push(`/location/2`)}>
-            <img
               alt="Red Forest"
               src="https://images.pexels.com/photos/3551207/pexels-photo-3551207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
             <div>Red Forest</div>
           </div>
-          <div onClick={() => history.push(`/location/3`)}>
+          <div onClick={() => history.push(`/location/2`)}>
             <img
               alt="Farol"
               src="https://images.pexels.com/photos/655018/pexels-photo-655018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
             <div>Farol</div>
           </div>
-          <div onClick={() => history.push(`/location/4`)}>
+          <div onClick={() => history.push(`/location/3`)}>
             <img
               alt="Green trail"
               src="https://images.pexels.com/photos/5846615/pexels-photo-5846615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
             <div>Green trail</div>
           </div>
-          <div onClick={() => history.push(`/location/5`)}>
+          <div onClick={() => history.push(`/location/4`)}>
             <img
               alt="Waterfall"
               src="https://i.picsum.photos/id/1039/300/300.jpg?hmac=im4VlwAVlc_D5YrlPUIyevVkivYNpLovBLVBSf4WmSw"
