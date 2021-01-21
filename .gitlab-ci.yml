@@ -1,7 +1,7 @@
-image: node 14.12.0
+image: node:14.12.0
 
 Test:
-  state: test
+  stage: test
   before_script:
     - yarn
   script:
