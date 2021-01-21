@@ -47,7 +47,6 @@ const RegisterPage = () => {
           width={"55vw"}
           slideSize="100%"
           autoPlay={8000}
-          spaceBetweenSlides="10px"
         />
       </Border>
       <Register />
