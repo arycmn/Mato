@@ -9,7 +9,7 @@ describe("Local Activity", () => {
 
     render(<LocalActivtyList activityID={id} />);
 
-    const fromScreen = screen.getByText("Board");
+    const fromScreen = screen.getByText("Ciclismo");
     const img = screen.getAllByRole("img");
 
     expect(fromScreen).toBeInTheDocument();
