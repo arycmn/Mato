@@ -1,11 +1,9 @@
-import { Container, Par, ButtonContainer,Login } from "./style";
+import { Container, Par, ButtonContainer, Login } from "./style";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../atoms/Button";
 import TextField from "../../atoms/TextField";
-import { useDispatch } from "react-redux";
-import {registerUser} from '../../../store/modules/members/thunk'
 import {
   email,
   name,
@@ -14,12 +12,13 @@ import {
   confirmPassword,
 } from "../../../utils/icons";
 
-import { useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
+import api from "../../../services/axios";
 
 const Register = (props) => {
-  const history = useHistory()
-  const dispatch = useDispatch();
+  const history = useHistory();
+
   const schema = yup.object().shape({
     user: yup
       .string()
@@ -50,12 +49,12 @@ const Register = (props) => {
   });
 
   const handleForm = async (data) => {
-    await dispatch(registerUser(data));
-    if (localStorage.getItem("authToken")) {
-      history.push("/page-success");
-    }
-  };
+    api.post("/register", data).then((res) => {
+      localStorage.setItem("authToken", res.data.accessToken);
 
+      history.push("/home");
+    });
+  };
 
   return (
     <Container>
@@ -89,6 +88,7 @@ const Register = (props) => {
             placeholderText="Senha"
             inputRef={register}
             name="password"
+            type="password"
             icon={password}
           />
           <Par> {errors.senha?.message}</Par>
@@ -97,6 +97,7 @@ const Register = (props) => {
             placeholderText="Confirmar senha"
             name="passwordConfirm"
             inputRef={register}
+            type="password"
             icon={confirmPassword}
           />
           <Par>{errors.passwordConfirm?.message}</Par>
@@ -106,8 +107,7 @@ const Register = (props) => {
             Enviar
           </Button>
         </ButtonContainer>
-        <Login onClick={() => history.push('/login')}>Login</Login>
-
+        <Login onClick={() => history.push("/login")}>Login</Login>
       </form>
     </Container>
   );
