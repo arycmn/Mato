@@ -1,5 +1,4 @@
 import Title from "../../components/atoms/Title";
-import Backpack from "../../utils/backpack.svg";
 import MainContent from "../../components/templates/MainContent";
 import { Container, Recomended, ImagemContainer } from "./style";
 import { useHistory } from "react-router-dom";

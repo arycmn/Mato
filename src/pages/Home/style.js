@@ -4,6 +4,7 @@ export const Container = styled.div`
   /*MainContent */
   margin-top: 30px;
   overflow: hidden;
+
   > div:nth-child(2) {
     width: 100vw;
 
@@ -105,6 +106,7 @@ export const Recomended = styled.div`
   letter-spacing: 0em;
   text-align: center;
   width: 90vw;
+  color: white;
   padding: 10px 0;
 `;
 export const ImagemContainer = styled.div`
