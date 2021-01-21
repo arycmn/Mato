@@ -12,7 +12,7 @@ import {
   PicturePosition,
 } from "./style";
 import Calendar from "../../components/atoms/Calendar";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FooterMenu from "../../components/molecules/FooterMenu";
@@ -28,12 +28,13 @@ const Reservation = () => {
 
   const [StateActive, setActive] = useState(0);
   const [LearnMore, SetLearnMore] = useState(false);
+  const history = useHistory();
 
   return (
     <>
       <Container>
         <Title>
-          <div>Location</div> <FavoriteIcon />
+          <div>Reserve uma data</div> <FavoriteIcon />
         </Title>
         <MainContent>
           <PicturePosition>
@@ -45,7 +46,7 @@ const Reservation = () => {
               width={"300px"}
             ></Picture>
           </PicturePosition>
-          <LearnMoreText>How long do you intend to stay?</LearnMoreText>
+          <LearnMoreText>Quanto tempo você deseja ficar? </LearnMoreText>
           <BarDays>
             <div
               onClick={() => setActive(0)}
@@ -88,7 +89,12 @@ const Reservation = () => {
             </LearnMoreText>
           )}
 
-          <Button width={"267px"} height={"52px"} round>
+          <Button
+            width={"267px"}
+            height={"52px"}
+            round
+            onClick={() => history.push("/login")}
+          >
             Confirmar reserva
           </Button>
         </MainContent>
