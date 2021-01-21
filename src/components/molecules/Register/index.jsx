@@ -1,9 +1,11 @@
-import { Container, Par, ButtonContainer } from "./style";
+import { Container, Par, ButtonContainer,Login } from "./style";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../../atoms/Button";
 import TextField from "../../atoms/TextField";
+import { useDispatch } from "react-redux";
+import {registerUser} from '../../../store/modules/members/thunk'
 import {
   email,
   name,
@@ -12,7 +14,12 @@ import {
   confirmPassword,
 } from "../../../utils/icons";
 
+import { useHistory } from 'react-router-dom'
+
+
 const Register = (props) => {
+  const history = useHistory()
+  const dispatch = useDispatch();
   const schema = yup.object().shape({
     user: yup
       .string()
@@ -42,9 +49,17 @@ const Register = (props) => {
     resolver: yupResolver(schema),
   });
 
+  const handleForm = async (data) => {
+    await dispatch(registerUser(data));
+    if (localStorage.getItem("authToken")) {
+      history.push("/page-success");
+    }
+  };
+
+
   return (
     <Container>
-      <form onSubmit={handleSubmit()}>
+      <form onSubmit={handleSubmit(handleForm)}>
         <div>
           <TextField
             placeholderText="Nome de usuário"
@@ -91,6 +106,8 @@ const Register = (props) => {
             Enviar
           </Button>
         </ButtonContainer>
+        <Login onClick={() => history.push('/login')}>Login</Login>
+
       </form>
     </Container>
   );
