@@ -28,8 +28,7 @@ const SiderMenu = () => {
           <img src={mato} alt={"logo"} />
 
           <button onClick={navigateTo("home")}> Home </button>
-          <button onClick={navigateTo("login")}> Login </button>
-          <button onClick={navigateTo("Register")}> Cadastre-se </button>
+          <button onClick={navigateTo("login")}> Log out </button>
           <button onClick={navigateTo("search")}> Explorar </button>
           <button onClick={navigateTo("profile")}> Perfil</button>
           <button onClick={navigateTo("following")}> Campistas</button>
