@@ -9,13 +9,11 @@ import mapIcon from "../../../utils/mapIcon";
 import { Tooltip } from "@material-ui/core";
 import Button from "../../atoms/Button";
 
-const MapComponent = ({data}) => {
+const MapComponent = ({ data }) => {
   const [initialPosition, setInitialPosition] = useState([0, 0]);
-  
-  const history = useHistory();
-  const [campsites, setCampsites] = useState([
 
-  ]);
+  const history = useHistory();
+  const [campsites, setCampsites] = useState([]);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -28,13 +26,17 @@ const MapComponent = ({data}) => {
   return (
     <Container>
       <MapContainer
-        center={[-14.512280, -52.022523]}
+        center={initialPosition}
         zoom={5}
         style={{ width: "60%", height: "100%" }}
       >
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         {data?.map((campsite, index) => (
-          <Marker position={[campsite.coords.lat,campsite.coords.lon]} icon={mapIcon} key={index}>
+          <Marker
+            position={[campsite.coords.lat, campsite.coords.lon]}
+            icon={mapIcon}
+            key={index}
+          >
             <Popup
               closeButton={false}
               minWidth={40}
