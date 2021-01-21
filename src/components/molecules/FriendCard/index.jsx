@@ -15,7 +15,7 @@ const FriendCard = ({ imgUrl, name }) => {
       ></Picture>
       <Name>{name}</Name>
       <Button width="32px" height="32px" round={screenWidth > 760}>
-        Follow
+        Unfollow
       </Button>
     </Container>
   );

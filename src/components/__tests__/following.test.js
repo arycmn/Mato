@@ -38,4 +38,12 @@ describe("Following List", () => {
     expect(igor).toBeInTheDocument();
     expect(image).toHaveLength(4);
   });
+
+  test("Should show a text", () => {
+    render(<FollowingList data={[]} />);
+
+    const fromScreen = screen.getByText(/Você não está seguindo ninguém/);
+
+    expect(fromScreen).toBeInTheDocument();
+  });
 });

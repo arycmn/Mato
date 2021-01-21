@@ -2,8 +2,6 @@ import { Container } from "./style";
 import FriendCard from "../../molecules/FriendCard";
 
 const FollowingList = ({ data }) => {
-  // console.log(data);
-
   return (
     <Container>
       {data.length > 0 ? (
