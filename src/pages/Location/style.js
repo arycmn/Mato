@@ -82,7 +82,7 @@ export const Container = styled.div`
       }
       @media (min-width: 1200px) {
         margin-left: 290px;
-        margin-top: 290px;
+        margin-top: 0px;
       }
       @media (max-width: 540px) {
         margin-left: 0px;
