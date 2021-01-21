@@ -16,7 +16,7 @@ const Reservation = () => {
           <img alt={"Backpack-Icon"} src={Backpack}></img>
           <div>New Journey</div>
         </div>
-        <div>Following</div>
+        <div onClick={() => history.push('/following')}>Following</div>
         <Recomended>
           <div>Recomended Places</div>
         </Recomended>
