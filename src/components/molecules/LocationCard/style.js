@@ -3,9 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 348px;
   height: 110px;
+  
   button {
-    margin-left: 120px;
-    margin-top: 8px;
+    position:relative;
+    left: 180px;
+    top:-50px;
+    width:100px;
+    border-radius:5px;
   }
 `;
 export const LocationName = styled.div`
@@ -14,7 +18,7 @@ export const LocationName = styled.div`
   color: #252c1f;
   margin-top: -110px;
   margin-left: 100px;
-
+  font-weight:300;
   @media (min-width: 760px) {
     color: #f5f5f5;
   }
@@ -22,11 +26,13 @@ export const LocationName = styled.div`
 
 export const LocationDescription = styled.div`
   font-size: 20px;
-  color: #252c1f;
+  color: #f5f5f5;
   opacity: 0.8;
   margin-left: 110px;
   width: 180px;
   overflow-wrap: break-word;
+  font-weight:200;
+  font-size:16px;
 `;
 
 export const ButtonContainer = styled.div`

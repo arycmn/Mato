@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import Title from "../../components/atoms/Title";
 import MainContent from "../../components/templates/MainContent";
 import { Container, Recomended, ImagemContainer } from "./style";
@@ -33,13 +34,6 @@ const Reservation = () => {
               src="https://images.pexels.com/photos/3551207/pexels-photo-3551207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
             <div>Florestas</div>
-          </div>
-          <div onClick={() => history.push(`/location/2`)}>
-            <img
-              alt="Farol"
-              src="https://images.pexels.com/photos/655018/pexels-photo-655018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            ></img>
-            <div>Farol</div>
           </div>
           <div onClick={() => history.push(`/location/3`)}>
             <img

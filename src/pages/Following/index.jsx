@@ -1,9 +1,10 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
 import MainContent from "../../components/templates/MainContent";
 import Title from "../../components/atoms/Title";
-
-import { useSelector } from "react-redux";
+import { getUserListThunk } from "../../store/modules/members/thunk";
+import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
 import api from "../../services/axios";

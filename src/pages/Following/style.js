@@ -7,10 +7,15 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+>div:nth-child(1){
+  >div:nth-child(1){
+    >div 
+  }
+}
   > div:nth-child(1) {
     padding: 15px 0;
   }
+
   > div:nth-child(2) {
     margin-right: 0;
     background-color: transparent;

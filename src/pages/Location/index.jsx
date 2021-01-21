@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
@@ -14,8 +15,8 @@ const Location = () => {
   const { campsList } = useSelector((store) => store);
   const { id } = useParams();
   const [LearnMore, SetLearnMore] = useState(false);
-  const history = useHistory()
-  
+  const history = useHistory();
+
   useEffect(() => {
     dispatch(getCampsiteByCampsiteId(id));
   }, []);
@@ -24,7 +25,7 @@ const Location = () => {
   return (
     <Container>
       <Title>
-        <div>Location</div>
+        <div>{campsList.name}</div>
         <FavoriteIcon />
       </Title>
       <MainContent text={null}>
@@ -38,7 +39,7 @@ const Location = () => {
         {LearnMore ? (
           <LearnMoreText>
             <div>{campsList.description}</div>
-            <div onClick={() => SetLearnMore(!LearnMore)}>Hide</div>
+            <div onClick={() => SetLearnMore(!LearnMore)}>Esconder</div>
           </LearnMoreText>
         ) : (
           <LearnMoreText>
@@ -48,14 +49,19 @@ const Location = () => {
                 : "Loading"}
               ...
             </div>
-            <div onClick={() => SetLearnMore(!LearnMore)}>LearnMore</div>
+            <div onClick={() => SetLearnMore(!LearnMore)}>Saiba mais</div>
           </LearnMoreText>
         )}
-        <LocalActivies>Local Activies</LocalActivies>
+        <LocalActivies>Atividades no local</LocalActivies>
         <LocalActivityList
           activityID={campsList.activities_id ? campsList.activities_id : []}
         ></LocalActivityList>
-        <Button onClick={() => history.push(`/reservation/${id}`)} width={"267px"} height={"52px"} round>
+        <Button
+          onClick={() => history.push(`/reservation/${id}`)}
+          width={"267px"}
+          height={"52px"}
+          round
+        >
           Continue
         </Button>
       </MainContent>

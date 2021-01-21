@@ -6,6 +6,8 @@ import MainContent from "../../components/templates/MainContent";
 import MapComponent from "../../components/molecules/Map";
 import Button from "../../components/atoms/Button";
 import Title from "../../components/atoms/Title";
+import {useDispatch, useSelector } from 'react-redux'
+import { getCampsites } from '../../store/modules/camps/thunk'
 
 import {
   Container,
@@ -17,52 +19,21 @@ import {
 const YourJourney = () => {
   const [viewList, setViewList] = useState(false);
   const [width, setWidth] = useState(0);
+  const dispatch = useDispatch();
+  const { campsList } = useSelector((store) => store);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, [width]);
+  
+  useEffect(() => {
+    dispatch(getCampsites());
+  }, []);
 
-  const data = [
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-    {
-      name: "Lorem Ipsum",
-      description: "",
-      pictureSrc: "https://picsum.photos/200",
-    },
-  ];
 
   return (
     <Container>
-      <Title text={"Choose Your Journey"}></Title>
+      <Title text={"Escolha seu destino"}></Title>
       <MainContent>
         {width < 760 ? (
           <>
@@ -70,13 +41,13 @@ const YourJourney = () => {
               <ViewOptions viewList={viewList} setViewList={setViewList} />
             </SelectorContainer>
             {viewList ? (
-              <LocationList data={data} />
+              <LocationList data={campsList} />
             ) : (
               <>
-                <MapComponent />
+                <MapComponent data={campsList}/>
                 <ButtonContainer>
                   <Button width={"220px"} height={"56px"} round>
-                    Choose
+                    Escolher
                   </Button>
                 </ButtonContainer>
               </>
@@ -84,8 +55,8 @@ const YourJourney = () => {
           </>
         ) : (
           <LocationsContainer>
-            <MapComponent />
-            <LocationList data={data} />
+            <MapComponent data={campsList}/>
+            <LocationList data={campsList} />
           </LocationsContainer>
         )}
       </MainContent>
