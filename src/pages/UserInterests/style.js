@@ -7,7 +7,7 @@ export const Header = styled.div`
   color: white;
   @media (min-width: 1280px) {
     position: relative;
-    left: 25%;
+    left: 27%;
     width: 71%;
   }
   > img {
@@ -43,6 +43,7 @@ export const Header = styled.div`
       padding-left: 57vh;
       padding-top: 10vw;
       padding-bottom: 3vw;
+      
     }
   }
 `;
