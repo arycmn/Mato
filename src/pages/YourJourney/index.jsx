@@ -6,9 +6,9 @@ import MainContent from "../../components/templates/MainContent";
 import MapComponent from "../../components/molecules/Map";
 import Button from "../../components/atoms/Button";
 import Title from "../../components/atoms/Title";
-import {useDispatch, useSelector } from 'react-redux'
-import { getCampsites } from '../../store/modules/camps/thunk'
-
+import { useDispatch, useSelector } from "react-redux";
+import { getCampsites } from "../../store/modules/camps/thunk";
+import SiderMenu from "../../components/molecules/SiderMenu";
 import {
   Container,
   SelectorContainer,
@@ -25,42 +25,44 @@ const YourJourney = () => {
   useEffect(() => {
     setWidth(window.innerWidth);
   }, [width]);
-  
+
   useEffect(() => {
     dispatch(getCampsites());
   }, []);
 
-
   return (
-    <Container>
-      <Title text={"Escolha seu destino"}></Title>
-      <MainContent>
-        {width < 760 ? (
-          <>
-            <SelectorContainer>
-              <ViewOptions viewList={viewList} setViewList={setViewList} />
-            </SelectorContainer>
-            {viewList ? (
+    <>
+      <Container>
+        <Title text={"Escolha seu destino"}></Title>
+        <MainContent>
+          {width < 760 ? (
+            <>
+              <SelectorContainer>
+                <ViewOptions viewList={viewList} setViewList={setViewList} />
+              </SelectorContainer>
+              {viewList ? (
+                <LocationList data={campsList} />
+              ) : (
+                <>
+                  <MapComponent data={campsList} />
+                  <ButtonContainer>
+                    <Button width={"220px"} height={"56px"} round>
+                      Escolher
+                    </Button>
+                  </ButtonContainer>
+                </>
+              )}
+            </>
+          ) : (
+            <LocationsContainer>
+              <MapComponent data={campsList} />
               <LocationList data={campsList} />
-            ) : (
-              <>
-                <MapComponent data={campsList}/>
-                <ButtonContainer>
-                  <Button width={"220px"} height={"56px"} round>
-                    Escolher
-                  </Button>
-                </ButtonContainer>
-              </>
-            )}
-          </>
-        ) : (
-          <LocationsContainer>
-            <MapComponent data={campsList}/>
-            <LocationList data={campsList} />
-          </LocationsContainer>
-        )}
-      </MainContent>
-    </Container>
+            </LocationsContainer>
+          )}
+        </MainContent>
+      </Container>
+      <SiderMenu />
+    </>
   );
 };
 
