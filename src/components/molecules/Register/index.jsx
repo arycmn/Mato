@@ -20,11 +20,11 @@ const Register = (props) => {
   const history = useHistory();
 
   const schema = yup.object().shape({
-    user: yup
+    username: yup
       .string()
       .min(6, "o nome de usuário deve ter ao menos 6 caracteres")
       .required("campo obrigatório"),
-    name: yup
+    completeName: yup
       .string()
       .min(4, "Mínimo de 4 dígitos")
       .matches(/[ ]/, "é necessário incluir ao menos um sobrenome")
@@ -48,11 +48,24 @@ const Register = (props) => {
     resolver: yupResolver(schema),
   });
 
-  const handleForm = async (data) => {
-    api.post("/register", data).then((res) => {
+  const handleForm = (data) => {
+    const { passwordConfirm, ...user } = data;
+
+    const userData = {
+      ...user,
+      following_id: [],
+      followers_id: [],
+      interests: {
+        activities: [],
+        typeLocal: [],
+      },
+      image_url: "",
+    };
+
+    api.post("/register", userData).then((res) => {
       localStorage.setItem("authToken", res.data.accessToken);
 
-      history.push("/home");
+      history.push("/user-interests");
     });
   };
 
@@ -63,7 +76,7 @@ const Register = (props) => {
           <TextField
             placeholderText="Nome de usuário"
             inputRef={register}
-            name="user"
+            name="username"
             icon={profile}
           />
           <Par> {errors.user?.message}</Par>
@@ -71,7 +84,7 @@ const Register = (props) => {
           <TextField
             placeholderText="Nome Completo"
             inputRef={register}
-            name="name"
+            name="completeName"
             icon={name}
           />
           <Par> {errors.name?.message}</Par>
@@ -91,7 +104,7 @@ const Register = (props) => {
             type="password"
             icon={password}
           />
-          <Par> {errors.senha?.message}</Par>
+          <Par> {errors.password?.message}</Par>
 
           <TextField
             placeholderText="Confirmar senha"
