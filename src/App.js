@@ -14,7 +14,7 @@ function App() {
       <Routes />
       {history.location.pathname === "/login" ||
       history.location.pathname === "/register" ||
-      history.location.pathname === "/home" ? (
+      history.location.pathname === "/" ? (
         <></>
       ) : (
         <>

@@ -60,7 +60,7 @@ export const Container = styled.div`
 
 export const LocationList = styled.div`
   width: 90%;
-  height: ${({ minimized }) => (minimized ? "35vh" : "78vh")};
+  height: ${({ minimized }) => (minimized ? "69vh" : "78vh")};
   margin: 5px auto 0;
   overflow-y: scroll;
 
@@ -69,7 +69,7 @@ export const LocationList = styled.div`
   }
 
   div {
-    display: inline;
+    //display: inline;
     padding: 10px;
   }
 
@@ -107,4 +107,68 @@ export const LocationList = styled.div`
       height: 200px;
     }
   }
+`;
+
+export const Cont = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  justify-content: space-between;
+
+  height: 180px;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+  :hover {
+    background-color: RGBA(222, 226, 230, 0.1);
+  }
+  transition: background 0.5s;
+  > div {
+    padding: 0;
+  }
+  > div img {
+    margin: 0;
+    margin-left: 10px;
+    @media (max-width: 767px) {
+      height: 90px;
+      width: 90px;
+    }
+  }
+`;
+export const Text = styled.div`
+  color: whitesmoke;
+  font-size: 16px;
+  @media (max-width: 767px) {
+    font-size: 10px;
+  }
+  font-weight: 200;
+`;
+export const ButtonLearnMore = styled.div`
+  @media (min-width: 1200px) {
+    height: 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 767px) {
+    height: 4vh;
+    width: 50vw;
+  }
+  height: 3vh;
+  width: 10vw;
+
+  border: 1px solid whitesmoke;
+  margin-right: 20px;
+
+  color: whitesmoke;
+
+  font-weight: 200;
+  cursor: pointer;
+  :hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  transition: background 0.5s;
 `;
