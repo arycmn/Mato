@@ -12,43 +12,33 @@ import {
 const SearchFilterBox = () => {
   const [filters, setFilters] = useState([
     {
-      name: "Trilha",
-      status: false,
-    },
-    {
-      name: "Pesca",
-      status: false,
-    },
-    {
-      name: "Ciclismo",
-      status: false,
-    },
-    {
-      name: "Surf",
-      status: false,
-    },
-    {
+      id: 0,
       name: "Natação",
       status: false,
     },
     {
+      id: 1,
       name: "Corrida",
       status: false,
     },
     {
-      name: "Praia",
+      id: 2,
+      name: "Ciclismo",
       status: false,
     },
     {
-      name: "Montanha",
+      id: 3,
+      name: "Pesca",
       status: false,
     },
     {
-      name: "Rios",
+      id: 4,
+      name: "Trilha",
       status: false,
     },
     {
-      name: "Floresta",
+      id: 5,
+      name: "Surf",
       status: false,
     },
   ]);
@@ -65,8 +55,8 @@ const SearchFilterBox = () => {
               preference.status = !preference.status;
 
               preference.status
-                ? dispatch(addSearchPreferences(preference.name))
-                : dispatch(removeSearchPreferences(preference.name));
+                ? dispatch(addSearchPreferences(preference.id))
+                : dispatch(removeSearchPreferences(preference.id));
 
               setFilters([...filters]);
             }}

@@ -5,7 +5,6 @@ export const Container = styled.div`
   width: 85%;
   background: #3a613e;
   filter: opacity(87%);
-  border-radius: 10px;
   padding: 5px;
   @media (min-width: 760px) {
     max-width: 1100px;
@@ -38,19 +37,17 @@ export const Fragment = styled.div`
       display: flex;
       margin: 0px;
 
-   img {
-      width: 25px;
-      height: 25px;
-      padding-right: 10px;
-    }
+      img {
+        width: 25px;
+        height: 25px;
+        padding-right: 10px;
+      }
     }
   }
-    }
 
-    > img {
-      width: 25px;
-      height: 25px;
-      padding-right: 10px;
-    }
+  > img {
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
   }
 `;
