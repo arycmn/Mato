@@ -6,6 +6,9 @@ export const Container = styled.div`
   flex-flow: row wrap;
   width: 90vw;
   margin: auto;
+  @media (min-width: 768px) {
+    margin: 0;
+  }
   > div {
     width: 80px;
     margin: 10px;
