@@ -20,22 +20,9 @@ const Reservation = () => {
 
   return (
     <Container>
-<<<<<<< HEAD
       <MainContent>
         <Title text={"Bem-vindo ao Mato!"} />
 
-=======
-      <MainContent title={"Welcome"}>
-        <div className="Link" onClick={() => history.push(`/news`)}>
-          <img alt={"Backpack-Icon"} src={Backpack}></img>
-          <div>News</div>
-        </div>
-        <div className="Link" onClick={() => history.push(`/your-journey`)}>
-          <img alt={"Backpack-Icon"} src={Backpack}></img>
-          <div>New Journey</div>
-        </div>
-        <div onClick={() => history.push("/following")}>Following</div>
->>>>>>> 18491a8362f2ad6c61270447ab3d5e43cf987746
         <Recomended>
           Selecionamos alguns lugares que você pode gostar
         </Recomended>
