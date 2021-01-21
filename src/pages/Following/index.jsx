@@ -2,61 +2,26 @@ import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
 import MainContent from "../../components/templates/MainContent";
 import Title from "../../components/atoms/Title";
+import { useEffect } from 'react'
+import { getUserListThunk } from '../../store/modules/members/thunk'
+import { useDispatch,useSelector } from 'react-redux'
 
 const Following = () => {
   const width = window.innerWidth;
 
-  const data = [
-    {
-      name: "Jorge",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Marcos",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvia",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Mario",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-  ];
+  const data = [];
+
+  const dispatch = useDispatch();
+  const { memberList } = useSelector((store) => store);
+  
+  useEffect(() => {
+    dispatch(getUserListThunk());
+  }, []);
 
   return (
     <Container>
       <MainContent title="Following">
-        <FollowingList data={data} />
+        <FollowingList data={memberList} />
       </MainContent>
     </Container>
   );

@@ -24,7 +24,7 @@ const Location = () => {
   return (
     <Container>
       <Title>
-        <div>Location</div>
+        <div>{campsList.name}</div>
         <FavoriteIcon />
       </Title>
       <MainContent text={null}>
@@ -38,7 +38,7 @@ const Location = () => {
         {LearnMore ? (
           <LearnMoreText>
             <div>{campsList.description}</div>
-            <div onClick={() => SetLearnMore(!LearnMore)}>Hide</div>
+            <div onClick={() => SetLearnMore(!LearnMore)}>Esconder</div>
           </LearnMoreText>
         ) : (
           <LearnMoreText>
@@ -48,10 +48,10 @@ const Location = () => {
                 : "Loading"}
               ...
             </div>
-            <div onClick={() => SetLearnMore(!LearnMore)}>LearnMore</div>
+            <div onClick={() => SetLearnMore(!LearnMore)}>Saiba mais</div>
           </LearnMoreText>
         )}
-        <LocalActivies>Local Activies</LocalActivies>
+        <LocalActivies>Atividades no local</LocalActivies>
         <LocalActivityList
           activityID={campsList.activities_id ? campsList.activities_id : []}
         ></LocalActivityList>

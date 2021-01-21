@@ -5,7 +5,7 @@ const FollowingList = ({ data }) => {
   return (
     <Container>
       {data.map((user, index) => (
-        <FriendCard key={index} imgUrl={user.image_url} name={user.name} />
+        <FriendCard key={index} imgUrl={user.image_url} name={user.completeName} />
       ))}
     </Container>
   );
