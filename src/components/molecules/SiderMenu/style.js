@@ -6,10 +6,12 @@ export const Container = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
   margin: 0px;
   padding: 20px;
+  z-index: 1;
 
   img {
     margin: 30px;
@@ -25,7 +27,7 @@ export const Container = styled.div`
     font-size: 22px;
     font-family: "Poppins", sans-serif;
   }
-  @media (max-width: 640px) {
+  @media (max-width: 760px) {
     display: none;
   }
 `;

@@ -5,7 +5,18 @@ export const Container = styled.div`
   width: 85%;
   background: #3a613e;
   filter: opacity(87%);
+  border-radius: 10px;
   padding: 5px;
+  @media (min-width: 760px) {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    padding: 20px;
+    margin-left: 20px;
+  }
 `;
 
 export const Fragment = styled.div`
@@ -22,6 +33,19 @@ export const Fragment = styled.div`
     font-size: 1.2rem;
     font-family: Poppings, sans-serif;
     margin: 5px 0;
+
+    @media (min-width: 760px) {
+      display: flex;
+      margin: 0px;
+
+   img {
+      width: 25px;
+      height: 25px;
+      padding-right: 10px;
+    }
+    }
+  }
+    }
 
     > img {
       width: 25px;

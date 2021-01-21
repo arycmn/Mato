@@ -11,4 +11,8 @@ export const Container = styled.div`
     font-size: 70px;
     color: #f5f5f5;
   }
+
+  @media (min-width: 1280px) {
+    margin-left: 150px;
+  }
 `;

@@ -12,31 +12,43 @@ import {
 const SearchFilterBox = () => {
   const [filters, setFilters] = useState([
     {
-      name: "Horse",
+      name: "Trilha",
       status: false,
     },
     {
-      name: "Relaxation",
+      name: "Pesca",
       status: false,
     },
     {
-      name: "Fishing",
+      name: "Ciclismo",
       status: false,
     },
     {
-      name: "Climbing",
+      name: "Surf",
       status: false,
     },
     {
-      name: "Exploration",
+      name: "Natação",
       status: false,
     },
     {
-      name: "Camping",
+      name: "Corrida",
       status: false,
     },
     {
-      name: "Motorhome",
+      name: "Praia",
+      status: false,
+    },
+    {
+      name: "Montanha",
+      status: false,
+    },
+    {
+      name: "Rios",
+      status: false,
+    },
+    {
+      name: "Floresta",
       status: false,
     },
   ]);

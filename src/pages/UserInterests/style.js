@@ -5,6 +5,11 @@ export const Header = styled.div`
   border-radius: 10px;
   border: 50px;
   color: white;
+  @media (min-width: 1280px) {
+    position: relative;
+    left: 25%;
+    width: 71%;
+  }
   > img {
     padding-top: 15px;
     padding-bottom: 0px;
@@ -34,6 +39,7 @@ export const Header = styled.div`
       height: 200px;
     }
     @media (min-width: 1280px) {
+      display: none;
       padding-left: 57vh;
       padding-top: 10vw;
       padding-bottom: 3vw;
@@ -41,24 +47,28 @@ export const Header = styled.div`
   }
 `;
 
+export const TextContainer = styled.div``;
+
 export const InterestsContainer = styled.div`
-  margin:auto;
-  display:flex;
+  margin: auto;
+  display: flex;
   justify-content: center;
+  height: fit-content;
 `;
 
 export const ButtonContainer = styled.div`
-  display:flex;
-  justify-content:center;
-  margin:auto;
-  width:220px;
-  margin-bottom:100px;
-  
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  width: 220px;
+  margin-bottom: 75px;
+
   @media (min-width: 640px) {
-    margin-top:120px;
+    margin-top: 120px;
   }
 
   @media (min-width: 900px) {
-    margin-top:42px;
+    margin-top: 42px;
   }
 `;

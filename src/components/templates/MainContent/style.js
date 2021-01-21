@@ -17,7 +17,8 @@ export const Container = styled.div`
 
   @media (min-width: 760px) {
     background: transparent;
-    width: 100%;
+    width: calc(100% - 390px);
+    margin-left: 390px;
 
     ::-webkit-scrollbar {
       width: 5px;
