@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { getCampsiteByCampsiteId } from "../../store/modules/camps/thunk";
 import FavoriteIcon from "../../components/atoms/FavoriteIcon";
 import Picture from "../../components/atoms/Picture";
@@ -13,10 +13,12 @@ const Location = () => {
   const dispatch = useDispatch();
   const { campsList } = useSelector((store) => store);
   const { id } = useParams();
+  const [LearnMore, SetLearnMore] = useState(false);
+  const history = useHistory()
+  
   useEffect(() => {
     dispatch(getCampsiteByCampsiteId(id));
   }, []);
-  const [LearnMore, SetLearnMore] = useState(false);
 
   console.log(campsList);
   return (
@@ -53,7 +55,7 @@ const Location = () => {
         <LocalActivityList
           activityID={campsList.activities_id ? campsList.activities_id : []}
         ></LocalActivityList>
-        <Button width={"267px"} height={"52px"} round>
+        <Button onClick={() => history.push(`/reservation/${id}`)} width={"267px"} height={"52px"} round>
           Continue
         </Button>
       </MainContent>
