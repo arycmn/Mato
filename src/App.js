@@ -10,9 +10,13 @@ import { useDispatch } from "react-redux";
 
 function App() {
   const history = useHistory();
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if(history.location.pathname === '/'){
+      history.push('/login')
+    }
     dispatch(getUserListThunk());
   }, []);
 
