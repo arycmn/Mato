@@ -1,19 +1,12 @@
-import SiderMenu from "../../components/molecules/SiderMenu";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-import {
-  Container,
-  LocationList,
-  Input,
-  Text,
-  ButtonLearnMore,
-  Cont,
-} from "./style";
+import { Container, LocationList, Text, ButtonLearnMore, Cont } from "./style";
+import SiderMenu from "../../components/molecules/SiderMenu";
 import { search } from "../../utils/icons";
 import { useSelector } from "react-redux";
 import Title from "../../components/atoms/Title";
-import TextField from "../../components/atoms/TextField";
+
 import Button from "../../components/atoms/Button";
 import SearchFilterBox from "../../components/molecules/SearchFilterBox";
 import Picture from "../../components/atoms/Picture";

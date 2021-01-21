@@ -1,9 +1,9 @@
-import SiderMenu from "../../components/molecules/SiderMenu";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useHistory } from "react-router-dom";
 import { getCampsiteByCampsiteId } from "../../store/modules/camps/thunk";
 import FavoriteIcon from "../../components/atoms/FavoriteIcon";
+import SiderMenu from "../../components/molecules/SiderMenu";
 import Picture from "../../components/atoms/Picture";
 import Button from "../../components/atoms/Button";
 import MainContent from "../../components/templates/MainContent";
@@ -23,49 +23,52 @@ const Location = () => {
 
   console.log(campsList);
   return (
-    <Container>
-      <Title>
-        <div>{campsList.name}</div>
-        <FavoriteIcon />
-      </Title>
-      <MainContent text={null}>
-        <Picture
-          alt={"Location Picture"}
-          src={campsList.image_url}
-          picturetype={"location"}
-          height={"220px"}
-          width={"300px"}
-        ></Picture>
-        {LearnMore ? (
-          <LearnMoreText>
-            <div>{campsList.description}</div>
-            <div onClick={() => SetLearnMore(!LearnMore)}>Esconder</div>
-          </LearnMoreText>
-        ) : (
-          <LearnMoreText>
-            <div>
-              {campsList.description
-                ? campsList.description.split("").splice(0, 35).join("")
-                : "Loading"}
-              ...
-            </div>
-            <div onClick={() => SetLearnMore(!LearnMore)}>Saiba mais</div>
-          </LearnMoreText>
-        )}
-        <LocalActivies>Atividades no local</LocalActivies>
-        <LocalActivityList
-          activityID={campsList.activities_id ? campsList.activities_id : []}
-        ></LocalActivityList>
-        <Button
-          onClick={() => history.push(`/reservation/${id}`)}
-          width={"267px"}
-          height={"52px"}
-          round
-        >
-          Continue
-        </Button>
-      </MainContent>
-    </Container>
+    <>
+      <Container>
+        <Title>
+          <div>{campsList.name}</div>
+          <FavoriteIcon />
+        </Title>
+        <MainContent text={null}>
+          <Picture
+            alt={"Location Picture"}
+            src={campsList.image_url}
+            picturetype={"location"}
+            height={"220px"}
+            width={"300px"}
+          ></Picture>
+          {LearnMore ? (
+            <LearnMoreText>
+              <div>{campsList.description}</div>
+              <div onClick={() => SetLearnMore(!LearnMore)}>Esconder</div>
+            </LearnMoreText>
+          ) : (
+            <LearnMoreText>
+              <div>
+                {campsList.description
+                  ? campsList.description.split("").splice(0, 35).join("")
+                  : "Loading"}
+                ...
+              </div>
+              <div onClick={() => SetLearnMore(!LearnMore)}>Saiba mais</div>
+            </LearnMoreText>
+          )}
+          <LocalActivies>Atividades no local</LocalActivies>
+          <LocalActivityList
+            activityID={campsList.activities_id ? campsList.activities_id : []}
+          ></LocalActivityList>
+          <Button
+            onClick={() => history.push(`/reservation/${id}`)}
+            width={"267px"}
+            height={"52px"}
+            round
+          >
+            Reserve uma data
+          </Button>
+        </MainContent>
+      </Container>
+      <SiderMenu />
+    </>
   );
 };
 export default Location;
