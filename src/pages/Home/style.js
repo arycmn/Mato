@@ -240,6 +240,7 @@ export const ImagemContainer = styled.div`
     }
   }
   > div img {
+    border-radius: 15px;
     @media (min-width: 280px) {
       width: 105px;
       height: 105px;
