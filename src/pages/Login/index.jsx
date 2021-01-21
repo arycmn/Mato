@@ -44,7 +44,6 @@ const LoginPage = () => {
           width={"55vw"}
           slideSize="100%"
           autoPlay={8000}
-          spaceBetweenSlides="10px"
         />
       </Border>
       <img src={mato} alt={"logo"}></img>
