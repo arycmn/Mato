@@ -60,6 +60,22 @@ export const Container = styled.div`
 
   /**MainContent */
   > div:nth-child(2) {
+    @media (min-width: 768px) {
+      > div:nth-child(2) {
+        margin-left: 40px;
+        font-weight: 200;
+      }
+      width: 100vh;
+      margin-left: -333px;
+    }
+    @media (min-width: 1200px) {
+      width: 100vh;
+      margin-left: 10px;
+      > div:nth-child(2) {
+        margin-left: -140px;
+        font-weight: 200;
+      }
+    }
     > div:nth-child(4) {
       @media (min-width: 768px) {
         width: 37vw;
@@ -100,6 +116,10 @@ export const Container = styled.div`
     }
     > div {
       @media (min-width: 1200px) {
+        display: flex;
+        color: white;
+      }
+      @media (min-width: 768px) {
         display: flex;
         color: white;
       }
