@@ -81,16 +81,14 @@ export const Border = styled.div`
 `;
 
 export const Comment = styled.div`
-  @media (max-width: 1000px) {
-    display: none;
-  }
-
+  display: none;
+  
   @media (min-width: 1000px) {
     width: 1035px;
     height: 100px;
     background-color: rgb(14, 29, 14, 0.4);
     position: absolute;
-    top: 820px;
+    top: 660px;
     left: 100px;
 
     > img {

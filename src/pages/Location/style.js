@@ -59,6 +59,7 @@ export const Container = styled.div`
 
   /**MainContent */
   > div:nth-child(2) {
+  
     @media (min-width: 768px) {
       > div:nth-child(2) {
         margin-left: 40px;
@@ -73,6 +74,11 @@ export const Container = styled.div`
       > div:nth-child(2) {
         margin-left: -140px;
         font-weight: 200;
+      }
+      >button{
+        position:relative;
+        left:150px;
+        top:-100px;
       }
     }
     > div:nth-child(4) {
@@ -143,8 +149,14 @@ export const LearnMoreText = styled.div`
   flex-flow: column;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  text-align:justify;
   @media (min-width: 1200px) {
+    >div {
+      width: 35.4vw;      
+    }
     width: 50vw;
+    position:relative;
+    top:30px;
   }
   @media (max-width: 280px) {
     width: 100vw;

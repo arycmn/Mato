@@ -47,7 +47,7 @@ export const PlacesContainer = styled.div`
 
   @media (min-width: 1280px) {
     width: 70%;
-    height: auto;
+    height: 200px;
     padding: 2%;
   }
 `;

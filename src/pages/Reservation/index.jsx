@@ -75,7 +75,7 @@ const Reservation = () => {
           {LearnMore ? (
             <LearnMoreText>
               <div>{campsList.description}</div>
-              <div onClick={() => SetLearnMore(!LearnMore)}>Hide</div>
+              <div onClick={() => SetLearnMore(!LearnMore)}>Esconder</div>
             </LearnMoreText>
           ) : (
             <LearnMoreText>
@@ -85,7 +85,7 @@ const Reservation = () => {
                   : "Loading"}
                 ...
               </div>
-              <div onClick={() => SetLearnMore(!LearnMore)}>LearnMore</div>
+              <div onClick={() => SetLearnMore(!LearnMore)}>Saiba mais</div>
             </LearnMoreText>
           )}
 

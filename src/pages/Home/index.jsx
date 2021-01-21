@@ -9,14 +9,23 @@ import jwt_decode from "jwt-decode";
 import SiderMenu from "../../components/molecules/SiderMenu";
 
 const Reservation = () => {
+
   const history = useHistory();
+
+  if(!localStorage.getItem("authToken")){
+    history.push('/login')
+  }
+
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let token = localStorage.getItem("authToken");
-    let decoded = jwt_decode(token);
+    if(localStorage.getItem("authToken")){
+      let token = localStorage.getItem("authToken");
+      let decoded = jwt_decode(token);
+      dispatch(getProfileThunk(decoded));
+     
+    }
 
-    dispatch(getProfileThunk(decoded));
   });
 
   return (
