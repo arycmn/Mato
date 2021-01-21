@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 // import { getUserByIdThunk } from "../../store/modules/members";
 import { useHistory } from "react-router-dom";
 import {
@@ -37,6 +38,7 @@ const Profile = () => {
           Alterar informações
         </ChangeInfo>
       </BoxContainer>
+      <SiderMenu />
     </>
   );
 };

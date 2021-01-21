@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
 import MainContent from "../../components/templates/MainContent";
@@ -54,11 +55,14 @@ const Following = () => {
   ];
 
   return (
-    <Container>
-      <MainContent title="Following">
-        <FollowingList data={data} />
-      </MainContent>
-    </Container>
+    <>
+      <Container>
+        <MainContent title="Following">
+          <FollowingList data={data} />
+        </MainContent>
+      </Container>
+      <SiderMenu />
+    </>
   );
 };
 

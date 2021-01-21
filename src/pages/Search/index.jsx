@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -55,37 +56,40 @@ const Search = () => {
   };
 
   return (
-    <Container>
-      <Title text={"Pesquisa"} />
-      <input
-        placeholderText="Pesquisa"
-        icon={search}
-        type="search"
-        width={50}
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-      />
-      <Button width="100px" onClick={handleClickShowFilters}>
-        Filtrar
-      </Button>
+    <>
+      <Container>
+        <Title text={"Pesquisa"} />
+        <input
+          placeholderText="Pesquisa"
+          icon={search}
+          type="search"
+          width={50}
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <Button width="100px" onClick={handleClickShowFilters}>
+          Filtrar
+        </Button>
 
-      {showFilters && <SearchFilterBox />}
-      <LocationList minimized={showFilters}>
-        {wantedPlaces?.map((location, index) => (
-          <Cont onClick={handleNavigateToLocation(location.id)} key={index}>
-            <Picture
-              src={location.image_url}
-              alt={location.name}
-              width="150px"
-              height="150px"
-              onClick={handleNavigateToLocation(location.id)}
-            />
-            <Text>{location.description.split("").slice(0, 98)}. . .</Text>
-            <ButtonLearnMore>Learn More</ButtonLearnMore>
-          </Cont>
-        ))}
-      </LocationList>
-    </Container>
+        {showFilters && <SearchFilterBox />}
+        <LocationList minimized={showFilters}>
+          {wantedPlaces?.map((location, index) => (
+            <Cont onClick={handleNavigateToLocation(location.id)} key={index}>
+              <Picture
+                src={location.image_url}
+                alt={location.name}
+                width="150px"
+                height="150px"
+                onClick={handleNavigateToLocation(location.id)}
+              />
+              <Text>{location.description.split("").slice(0, 98)}. . .</Text>
+              <ButtonLearnMore>Learn More</ButtonLearnMore>
+            </Cont>
+          ))}
+        </LocationList>
+      </Container>
+      <SiderMenu />
+    </>
   );
 };
 

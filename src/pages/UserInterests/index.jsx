@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import Interests from "../../components/molecules/Interest";
 import Title from "../../components/atoms/Title";
 import Texts from "../../components/atoms/Texts";
@@ -10,7 +11,6 @@ import {
 import logo from "../../images/logo Mato.png";
 import Button from "../../components/atoms/Button";
 import { useHistory } from "react-router-dom";
-import SiderMenu from "../../components/molecules/SiderMenu";
 
 const UserInterests = () => {
   const history = useHistory();
@@ -36,6 +36,7 @@ const UserInterests = () => {
           </Button>
         </ButtonContainer>
       </Header>
+      <SiderMenu />
     </>
   );
 };

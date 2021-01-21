@@ -1,3 +1,4 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import Login from "../../components/molecules/Login";
 import Title from "../../components/atoms/Title";
 import {
@@ -7,7 +8,7 @@ import {
   CommentContent,
   TitleContainer,
 } from "./style";
-import logo from "../../images/logo Mato.png";
+import mato from "../../images/mato.png";
 import SanCarousel from "sancarousel";
 import carousel_pic1 from "../../images/carousel_pic1.jpg";
 import carousel_pic2 from "../../images/carousel_pic2.jpg";
@@ -46,7 +47,7 @@ const LoginPage = () => {
           spaceBetweenSlides="10px"
         />
       </Border>
-      <img src={logo} alt={"logo"}></img>
+      <img src={mato} alt={"logo"}></img>
       <TitleContainer>{"Login"}</TitleContainer>
       <Login />
       <Comment>
