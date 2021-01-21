@@ -1,13 +1,6 @@
-import getProfile from "./actions";
-
-const initialState = () => {
-  const initialUser = localStorage.getItem("user");
-  return initialUser ? JSON.parse(initialUser) : {};
-};
-
-const profileReducer = (state = initialState(), action) => {
+const profileReducer = (state = {}, action) => {
   switch (action.type) {
-    case getProfile:
+    case "@profile/GET":
       const { profile } = action;
       return profile;
 
