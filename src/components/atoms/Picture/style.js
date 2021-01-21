@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-image: url(${({ srcPicture }) => srcPicture});
+  margin-right: 10px;
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   border-radius: ${({ picturetype }) =>

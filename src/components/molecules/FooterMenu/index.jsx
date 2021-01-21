@@ -1,6 +1,5 @@
-import { useHistory } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import { Container } from "./style";
-
 import { profile, search, home, logout } from "../../../utils/icons";
 
 const FooterMenu = () => {

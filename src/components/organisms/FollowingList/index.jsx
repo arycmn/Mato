@@ -4,9 +4,17 @@ import FriendCard from "../../molecules/FriendCard";
 const FollowingList = ({ data }) => {
   return (
     <Container>
-      {data.map((user) => (
-        <FriendCard imgUrl={user.image_url} name={user.name} />
-      ))}
+      {data.length > 0 ? (
+        data.map((user, index) => (
+          <FriendCard
+            key={index}
+            imgUrl={user.image_url}
+            name={user.completeName}
+          />
+        ))
+      ) : (
+        <div>Você não está seguindo ninguém</div>
+      )}
     </Container>
   );
 };

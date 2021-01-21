@@ -11,12 +11,12 @@ import LocalActivity from "../../atoms/LocalActivity";
 
 const LocalActivityList = ({ activityID }) => {
   const reference = [
-    { name: "Run", id: 0, icon: run },
-    { name: "Cycling", id: 1, icon: cycling },
-    { name: "Swimming", id: 2, icon: swimming },
-    { name: "Fishing", id: 3, icon: fishing },
-    { name: "Hiking", id: 4, icon: hiking },
-    { name: "Board", id: 5, icon: board },
+    { name: "Natação", id: 0, icon: swimming },
+    { name: "Corrida", id: 1, icon: run },
+    { name: "Ciclismo", id: 2, icon: cycling },
+    { name: "Pesca", id: 3, icon: fishing },
+    { name: "Trilha", id: 4, icon: hiking },
+    { name: "Surf", id: 5, icon: board },
   ];
 
   return (

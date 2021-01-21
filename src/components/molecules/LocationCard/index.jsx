@@ -6,8 +6,10 @@ import {
 } from "./style";
 import Picture from "../../atoms/Picture";
 import Button from "../../atoms/Button";
+import { useHistory } from 'react-router-dom'
 
-const LocationCard = ({ src, locationName, locationDescription }) => {
+const LocationCard = ({ src, locationName, locationDescription,id }) => {
+  const history = useHistory()
   return (
     <Container>
       <Picture
@@ -32,8 +34,8 @@ const LocationCard = ({ src, locationName, locationDescription }) => {
           : locationDescription}
       </LocationDescription>
       <ButtonContainer>
-        <Button width={"132px"} height={"42px"}>
-          Learn More
+        <Button onClick={() => history.push(`/location/${id}`)}width={"132px"} height={"42px"}>
+          Saiba mais
         </Button>
       </ButtonContainer>
     </Container>

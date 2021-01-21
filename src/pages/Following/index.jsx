@@ -1,40 +1,29 @@
+import SiderMenu from "../../components/molecules/SiderMenu";
 import { Container } from "./style.js";
 import FollowingList from "../../components/organisms/FollowingList";
 import MainContent from "../../components/templates/MainContent";
-import FooterMenu from "../../components/molecules/FooterMenu";
+import Title from "../../components/atoms/Title";
+import { getUserListThunk } from "../../store/modules/members/thunk";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+
+import api from "../../services/axios";
 
 const Following = () => {
-  const data = [
-    {
-      name: "Jorge",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Marcos",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvia",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Mario",
-      image_url: "https://picsum.photos/200",
-    },
-    {
-      name: "Silvio",
-      image_url: "https://picsum.photos/200",
-    },
-  ];
+  const { profile } = useSelector((store) => store);
+  const [friendsList, setFriendsList] = useState([]);
+
+  useEffect(() => {
+    api
+      .get(`/users/${profile.sub}`)
+      .then((res) => setFriendsList(!!res.data.following_id || []));
+  });
 
   return (
     <Container>
-      <h1>Welcome $name</h1>
-      <MainContent>
-        <h2>Following</h2>
-        <FollowingList data={data} />
+      <MainContent title="Following">
+        <FollowingList data={friendsList} />
       </MainContent>
-      <FooterMenu />
     </Container>
   );
 };

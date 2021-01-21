@@ -7,6 +7,7 @@ export default createGlobalStyle`
         font-family: "Native Spirit";
         src: url(${NatureSpiritRough});
       }
+
   body {
     background-image: url(${Background});
     background-size: cover;
@@ -14,15 +15,19 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
-    z-index: -1;
+    z-index: -2;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-attachment: fixed;
   }
 
   div#bg-filter {
-    background: rgba(36, 57, 40, 0.42);
+    position:fixed;
+    top:0;
+    z-index:-1;
+    background: #0E1D0E;
+    opacity: 0.6;
     width: 100%;
     height: 100vh;
   }

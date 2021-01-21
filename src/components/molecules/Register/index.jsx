@@ -1,4 +1,4 @@
-import { Container, Par, ButtonContainer } from "./style";
+import { Container, Par, ButtonContainer, Login } from "./style";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -12,13 +12,19 @@ import {
   confirmPassword,
 } from "../../../utils/icons";
 
+import { useHistory } from "react-router-dom";
+
+import api from "../../../services/axios";
+
 const Register = (props) => {
+  const history = useHistory();
+
   const schema = yup.object().shape({
-    user: yup
+    username: yup
       .string()
       .min(6, "o nome de usuário deve ter ao menos 6 caracteres")
       .required("campo obrigatório"),
-    name: yup
+    completeName: yup
       .string()
       .min(4, "Mínimo de 4 dígitos")
       .matches(/[ ]/, "é necessário incluir ao menos um sobrenome")
@@ -34,6 +40,7 @@ const Register = (props) => {
       .required("Campo obrigatório"),
     passwordConfirm: yup
       .string()
+      .required("Campo obrigatório")
       .oneOf([yup.ref("password")], "As senhas diferem"),
   });
 
@@ -41,14 +48,35 @@ const Register = (props) => {
     resolver: yupResolver(schema),
   });
 
+  const handleForm = (data) => {
+    const { passwordConfirm, ...user } = data;
+
+    const userData = {
+      ...user,
+      following_id: [],
+      followers_id: [],
+      interests: {
+        activities: [],
+        typeLocal: [],
+      },
+      image_url: "",
+    };
+
+    api.post("/register", userData).then((res) => {
+      localStorage.setItem("authToken", res.data.accessToken);
+
+      history.push("/user-interests");
+    });
+  };
+
   return (
     <Container>
-      <form onSubmit={handleSubmit()}>
+      <form onSubmit={handleSubmit(handleForm)}>
         <div>
           <TextField
             placeholderText="Nome de usuário"
             inputRef={register}
-            name="user"
+            name="username"
             icon={profile}
           />
           <Par> {errors.user?.message}</Par>
@@ -56,7 +84,7 @@ const Register = (props) => {
           <TextField
             placeholderText="Nome Completo"
             inputRef={register}
-            name="name"
+            name="completeName"
             icon={name}
           />
           <Par> {errors.name?.message}</Par>
@@ -73,14 +101,16 @@ const Register = (props) => {
             placeholderText="Senha"
             inputRef={register}
             name="password"
+            type="password"
             icon={password}
           />
-          <Par> {errors.senha?.message}</Par>
+          <Par> {errors.password?.message}</Par>
 
           <TextField
             placeholderText="Confirmar senha"
             name="passwordConfirm"
             inputRef={register}
+            type="password"
             icon={confirmPassword}
           />
           <Par>{errors.passwordConfirm?.message}</Par>
@@ -90,6 +120,7 @@ const Register = (props) => {
             Enviar
           </Button>
         </ButtonContainer>
+        <Login onClick={() => history.push("/login")}>Login</Login>
       </form>
     </Container>
   );
