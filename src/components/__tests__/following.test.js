@@ -7,19 +7,19 @@ describe("Following List", () => {
   test("Should show some images and names", async () => {
     const data = [
       {
-        name: "Débora",
+        completeName: "Débora",
         image_url: "https://picsum.photos/200",
       },
       {
-        name: "Isabel",
+        completeName: "Isabel",
         image_url: "https://picsum.photos/200",
       },
       {
-        name: "Carlos",
+        completeName: "Carlos",
         image_url: "https://picsum.photos/200",
       },
       {
-        name: "Igor",
+        completeName: "Igor",
         image_url: "https://picsum.photos/200",
       },
     ];

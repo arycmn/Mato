@@ -2,13 +2,40 @@ import Title from "../../components/atoms/Title";
 import MainContent from "../../components/templates/MainContent";
 import { Container, Recomended, ImagemContainer } from "./style";
 import { useHistory } from "react-router-dom";
+import { getProfileThunk } from "../../store/modules/profile/thunk";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import jwt_decode from "jwt-decode";
+
 const Reservation = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    let token = localStorage.getItem("authToken");
+    let decoded = jwt_decode(token);
+
+    dispatch(getProfileThunk(decoded));
+  });
+
   return (
     <Container>
+<<<<<<< HEAD
       <MainContent>
         <Title text={"Bem-vindo ao Mato!"} />
 
+=======
+      <MainContent title={"Welcome"}>
+        <div className="Link" onClick={() => history.push(`/news`)}>
+          <img alt={"Backpack-Icon"} src={Backpack}></img>
+          <div>News</div>
+        </div>
+        <div className="Link" onClick={() => history.push(`/your-journey`)}>
+          <img alt={"Backpack-Icon"} src={Backpack}></img>
+          <div>New Journey</div>
+        </div>
+        <div onClick={() => history.push("/following")}>Following</div>
+>>>>>>> 18491a8362f2ad6c61270447ab3d5e43cf987746
         <Recomended>
           Selecionamos alguns lugares que você pode gostar
         </Recomended>

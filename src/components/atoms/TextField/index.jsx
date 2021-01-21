@@ -7,6 +7,8 @@ const TextField = ({
   width,
   value,
   onChange,
+  name,
+  inputRef,
 }) => {
   return (
     <Container width={width}>
@@ -16,6 +18,8 @@ const TextField = ({
         placeholder={placeholderText}
         value={value}
         onChange={onChange}
+        name={name}
+        ref={inputRef}
       ></input>
     </Container>
   );
