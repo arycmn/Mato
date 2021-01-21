@@ -7,26 +7,19 @@ const Reservation = () => {
   const history = useHistory();
   return (
     <Container>
-      <MainContent title={"Welcome"}>
-        <div className="Link" onClick={() => history.push(`/news`)}>
-          <img alt={"Backpack-Icon"} src={Backpack}></img>
-          <div>News</div>
-        </div>
-        <div className="Link" onClick={() => history.push(`/your-journey`)}>
-          <img alt={"Backpack-Icon"} src={Backpack}></img>
-          <div>New Journey</div>
-        </div>
-        <div onClick={() => history.push('/following')}>Following</div>
+      <MainContent>
+        <Title text={"Bem-vindo ao Mato!"} />
+
         <Recomended>
-          <div>Recomended Places</div>
+          Selecionamos alguns lugares que você pode gostar
         </Recomended>
         <ImagemContainer>
           <div onClick={() => history.push(`/location/1`)}>
             <img
-              alt="Red Forest"
+              alt="Florestas"
               src="https://images.pexels.com/photos/3551207/pexels-photo-3551207.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
-            <div>Red Forest</div>
+            <div>Florestas</div>
           </div>
           <div onClick={() => history.push(`/location/2`)}>
             <img
@@ -40,14 +33,24 @@ const Reservation = () => {
               alt="Green trail"
               src="https://images.pexels.com/photos/5846615/pexels-photo-5846615.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             ></img>
-            <div>Green trail</div>
+            <div>Trilhas</div>
           </div>
           <div onClick={() => history.push(`/location/4`)}>
             <img
               alt="Waterfall"
               src="https://i.picsum.photos/id/1039/300/300.jpg?hmac=im4VlwAVlc_D5YrlPUIyevVkivYNpLovBLVBSf4WmSw"
             ></img>
-            <div>Waterfall</div>
+            <div>Cachoeiras</div>
+          </div>
+        </ImagemContainer>
+        <Recomended>Explore lugares perto de você</Recomended>
+        <ImagemContainer>
+          <div className="Link" onClick={() => history.push(`/your-journey`)}>
+            <img
+              alt="Florestas"
+              src="https://d1nglqw9e0mrau.cloudfront.net/assets/images/thumbs/erangel-ee673d73.jpg"
+            ></img>
+            <div>Mapa</div>
           </div>
         </ImagemContainer>
       </MainContent>
