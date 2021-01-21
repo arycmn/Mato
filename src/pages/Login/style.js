@@ -97,7 +97,7 @@ export const Comment = styled.div`
     height: 100px;
     background-color: rgb(14, 29, 14, 0.4);
     position: absolute;
-    top: 820px;
+    top: 650px;
     left: 100px;
 
     > img {

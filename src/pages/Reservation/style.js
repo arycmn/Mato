@@ -45,7 +45,9 @@ export const Container = styled.div`
   }
 
   > div button {
-    margin-top:-200px;
+    position:absolute;
+    top:400px;
+    left:1000px;
   }
 `;
 export const CalendarContainer = styled.div`
@@ -78,8 +80,7 @@ export const LearnMoreText = styled.div`
   width: 80vw;
   word-break: break-word;
   
-
-
+  
   @media(min-width: 1200px){
     display: flex;
     position:relative;
@@ -89,7 +90,8 @@ export const LearnMoreText = styled.div`
     font-family: "Poppins", sans-serif;
     font-weight:200;
     font-size:26px;
-    
+    text-align:justify;
+
     left:560px;
     top:-370px;
     word-break: break-word;
@@ -99,8 +101,11 @@ export const LearnMoreText = styled.div`
     top:160px;
     left:-520px;
     font-size:18px;
-    width:800px;
-    
+    width:495px;
+    }
+    > div:nth-child(2){
+    text-decoration:underline;
+    font-weight:400;
     }
   }
 `;

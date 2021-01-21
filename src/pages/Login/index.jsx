@@ -14,8 +14,15 @@ import carousel_pic1 from "../../images/carousel_pic1.jpg";
 import carousel_pic2 from "../../images/carousel_pic2.jpg";
 import carousel_pic3 from "../../images/carousel_pic3.jpg";
 import carousel_pic4 from "../../images/carousel_pic4.jpg";
+import  { useHistory } from 'react-router-dom'
 
 const LoginPage = () => {
+  const history = useHistory() 
+
+  if(localStorage.getItem('authToken')){
+    history.push('/home')
+  }
+  
   const slides = [
     {
       img: carousel_pic1,
@@ -57,10 +64,7 @@ const LoginPage = () => {
           alt={"profile"}
         />
         <CommentContent>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
-          repudiandae qui assumenda aspernatur ut tenetur saepe doloribus
-          similique nobis corrupti nostrum, quisquam at commodi minima dicta
-          repellendus voluptates dignissimos aliquid!
+        "Foi uma experiência incrível, o lugar era tão bonito e bem preservado, excelente para passar o dia, só não tenho certeza se seria seguro passar a noite lá, pois como era bem preservado pudemos ver alguns animaiszinhos passando por lá, mas para uma experiência diurna é uma excelente pedida."
         </CommentContent>
       </Comment>
     </Header>

@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
 >div:nth-child(1){
   >div:nth-child(1){
-    >div 
+    >div {}
   }
 }
   > div:nth-child(1) {
