@@ -6,7 +6,6 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   font-size: 32px;
   font-family: "Poppins", sans-serif;
   color: #f5f5f5;

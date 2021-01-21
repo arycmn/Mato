@@ -1,7 +1,7 @@
 import GlobalStyle from "./styles/global";
 import Routes from "./routes";
 import FooterMenu from "./components/molecules/FooterMenu";
-import SiderMenu from "./components/molecules/SiderMenu";
+
 import { useHistory } from "react-router-dom";
 
 import { useEffect } from "react";
